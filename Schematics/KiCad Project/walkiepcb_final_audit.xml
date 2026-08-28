@@ -1,0 +1,4376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\rshan\Documents\ESP32-Walkie-Talkie-V2\Schematics\KiCad Project\walkiepcb.kicad_sch</source>
+    <date>2026-08-27T07:32:21</date>
+    <tool>Eeschema 10.0.4</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>ESP32 Walkie-Talkie — Economic PCBA schematic</title>
+        <company>Custom design</company>
+        <rev>C</rev>
+        <date>2026-08-24</date>
+        <source>walkiepcb.kicad_sch</source>
+        <comment number="1" value="1S Li-ion; WROOM + CH340C USB-UART; SX1262 915MHz; synchronous 3.3V logic"/>
+        <comment number="2" value="TPS63021 fixed buck-boost; 2.2uH; 10uF input; 3x22uF output."/>
+        <comment number="3" value="Power switch must be ON for USB programming; charging works with switch OFF."/>
+        <comment number="4" value="See JLC_PART_RESEARCH.md, PIN_ASSIGNMENTS.md, and LAYOUT_NOTES.md."/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
+        <field name="JLC/LCSC">C14663</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">Connector-local VBUS bypass</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="MPN" value="CC0603KRX7R9BB104"/>
+      <property name="JLC/LCSC" value="C14663"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="Connector-local VBUS bypass"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9f603336-cfae-4b8d-b4fb-0957a9dd1a4d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C4">
+      <value>1u</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="MPN">CL10A105KB8NNNC</field>
+        <field name="JLC/LCSC">C15849</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">ESP32 EN power-on delay</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="MPN" value="CL10A105KB8NNNC"/>
+      <property name="JLC/LCSC" value="C15849"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="ESP32 EN power-on delay"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a20b134b-9264-4d5d-802b-76434b191a18</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C5">
+      <value>10u</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="MPN">CL21A106KAYNNNE</field>
+        <field name="JLC/LCSC">C15850</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">TP4056 input bulk</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="MPN" value="CL21A106KAYNNNE"/>
+      <property name="JLC/LCSC" value="C15850"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="TP4056 input bulk"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>12502ecc-dfbe-481d-a15d-baaf38a081cb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C6">
+      <value>10u</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="MPN">CL21A106KAYNNNE</field>
+        <field name="JLC/LCSC">C15850</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">TP4056 battery bypass</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="MPN" value="CL21A106KAYNNNE"/>
+      <property name="JLC/LCSC" value="C15850"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="TP4056 battery bypass"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>619f00b4-fe53-4c7e-94b2-c77d8bf267e8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C7">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
+        <field name="JLC/LCSC">C14663</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">DW01 supply filter</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="MPN" value="CC0603KRX7R9BB104"/>
+      <property name="JLC/LCSC" value="C14663"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="DW01 supply filter"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>264df598-1304-4877-a628-6beb93481909</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C8">
+      <value>10u</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="MPN">CL21A106KAYNNNE</field>
+        <field name="JLC/LCSC">C15850</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">Buck-boost input capacitor; place at VIN/PGND</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="MPN" value="CL21A106KAYNNNE"/>
+      <property name="JLC/LCSC" value="C15850"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="Buck-boost input capacitor; place at VIN/PGND"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>43f743bc-b959-4fa5-abaa-18d338064422</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C9">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
+        <field name="JLC/LCSC">C14663</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">Buck-boost VINA bypass; place at VINA/GND</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="MPN" value="CC0603KRX7R9BB104"/>
+      <property name="JLC/LCSC" value="C14663"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="Buck-boost VINA bypass; place at VINA/GND"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>64d3b767-b06d-4265-97df-e8572458236e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C10">
+      <value>22u</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="MPN">CL21A226MAQNNNE</field>
+        <field name="JLC/LCSC">C45783</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">TPS63021 output capacitor 1; place at VOUT/PGND</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="MPN" value="CL21A226MAQNNNE"/>
+      <property name="JLC/LCSC" value="C45783"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="TPS63021 output capacitor 1; place at VOUT/PGND"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>768d6957-81ec-46f0-9207-9d9b7d9555cc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C11">
+      <value>22u</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="MPN">CL21A226MAQNNNE</field>
+        <field name="JLC/LCSC">C45783</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">TPS63021 output capacitor 2; place at VOUT/PGND</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="MPN" value="CL21A226MAQNNNE"/>
+      <property name="JLC/LCSC" value="C45783"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="TPS63021 output capacitor 2; place at VOUT/PGND"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a6929cec-ae31-4d6c-9308-d81ab574b8ea</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C12">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
+        <field name="JLC/LCSC">C14663</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">ESP32 local HF bypass</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="MPN" value="CC0603KRX7R9BB104"/>
+      <property name="JLC/LCSC" value="C14663"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="ESP32 local HF bypass"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5b8cc421-eb09-4d18-937a-9e316be338fe</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C13">
+      <value>10u</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="MPN">CL21A106KAYNNNE</field>
+        <field name="JLC/LCSC">C15850</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">ESP32 local bulk</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="MPN" value="CL21A106KAYNNNE"/>
+      <property name="JLC/LCSC" value="C15850"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="ESP32 local bulk"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3e2c562f-f945-4b02-acaa-0d347f0e65a6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C14">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
+        <field name="JLC/LCSC">C14663</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">ADC acquisition reservoir; 5ms Thevenin RC</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="MPN" value="CC0603KRX7R9BB104"/>
+      <property name="JLC/LCSC" value="C14663"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="ADC acquisition reservoir; 5ms Thevenin RC"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b7d76b8e-c9b8-4314-bcb9-75cf564c7102</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C15">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
+        <field name="JLC/LCSC">C14663</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">ICS-43432 local bypass; place directly between VDD and GND</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="MPN" value="CC0603KRX7R9BB104"/>
+      <property name="JLC/LCSC" value="C14663"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="ICS-43432 local bypass; place directly between VDD and GND"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>64881f37-6c6d-4ffa-8a08-ded77a006110</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C16">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
+        <field name="JLC/LCSC">C14663</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">MAX98357A local bypass</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="MPN" value="CC0603KRX7R9BB104"/>
+      <property name="JLC/LCSC" value="C14663"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="MAX98357A local bypass"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d5f2947b-533a-4c89-bc02-ff61b789d899</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C17">
+      <value>1u</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="MPN">CL10A105KB8NNNC</field>
+        <field name="JLC/LCSC">C15849</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">MAX98357A local mid-band bypass</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="MPN" value="CL10A105KB8NNNC"/>
+      <property name="JLC/LCSC" value="C15849"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="MAX98357A local mid-band bypass"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2bdc6bd0-53a7-410b-ad1a-c9fc4eadd080</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C18">
+      <value>10u</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="MPN">CL21A106KAYNNNE</field>
+        <field name="JLC/LCSC">C15850</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">MAX98357A local bulk</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="MPN" value="CL21A106KAYNNNE"/>
+      <property name="JLC/LCSC" value="C15850"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="MAX98357A local bulk"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fe0e1e9d-a35d-42d2-be57-654bb3b0a571</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C19">
+      <value>22u</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="MPN">CL21A226MAQNNNE</field>
+        <field name="JLC/LCSC">C45783</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">TPS63021 output capacitor 3; 66uF nominal bank follows TI stability matrix</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="MPN" value="CL21A226MAQNNNE"/>
+      <property name="JLC/LCSC" value="C45783"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="TPS63021 output capacitor 3; 66uF nominal bank follows TI stability matrix"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3bde56ba-d443-43d6-a343-a78b339ca270</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C20">
+      <value>10u</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="MPN">CL21A106KAYNNNE</field>
+        <field name="JLC/LCSC">C15850</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">Buck-boost input capacitor 2; TPS63021 reference design uses 2x10uF at VIN/PGND</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="MPN" value="CL21A106KAYNNNE"/>
+      <property name="JLC/LCSC" value="C15850"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="Buck-boost input capacitor 2; TPS63021 reference design uses 2x10uF at VIN/PGND"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>32cc148a-9e72-4e6b-8834-c08facbab340</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C26">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
+        <field name="JLC/LCSC">C14663</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">Potentiometer ADC filter</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="MPN" value="CC0603KRX7R9BB104"/>
+      <property name="JLC/LCSC" value="C14663"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="Potentiometer ADC filter"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>080dab92-ce0d-489d-8ecd-3e0a48113e42</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C27">
+      <value>22u</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="MPN">CL21A226MAQNNNE</field>
+        <field name="JLC/LCSC">C45783</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">Ra-01SH local bulk decoupling</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="MPN" value="CL21A226MAQNNNE"/>
+      <property name="JLC/LCSC" value="C45783"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="Ra-01SH local bulk decoupling"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d73bb0fb-16bf-4820-93ec-200f871a4a66</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C28">
+      <value>22u</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="MPN">CL21A226MAQNNNE</field>
+        <field name="JLC/LCSC">C45783</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">Ra-01SH local bulk decoupling</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="MPN" value="CL21A226MAQNNNE"/>
+      <property name="JLC/LCSC" value="C45783"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="Ra-01SH local bulk decoupling"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ae441bb6-f0fb-4092-ac7a-cac846d54053</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C29">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
+        <field name="JLC/LCSC">C14663</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">Ra-01SH/CH340C local high-frequency decoupling</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="MPN" value="CC0603KRX7R9BB104"/>
+      <property name="JLC/LCSC" value="C14663"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="Ra-01SH/CH340C local high-frequency decoupling"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>982b26fb-12d9-4103-9181-48a67de2e959</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C30">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
+        <field name="JLC/LCSC">C14663</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">Ra-01SH/CH340C local high-frequency decoupling</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="MPN" value="CC0603KRX7R9BB104"/>
+      <property name="JLC/LCSC" value="C14663"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="Ra-01SH/CH340C local high-frequency decoupling"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>85a795f3-4ed1-4ae1-ae7b-8071b4cb62de</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D1">
+      <value>SS34</value>
+      <footprint>Diode_SMD:D_SMA</footprint>
+      <fields>
+        <field name="Manufacturer">MDD</field>
+        <field name="MPN">SS34</field>
+        <field name="JLC/LCSC">C8678</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">USB-to-system Schottky; anode USB, cathode SYS_RAW</field>
+        <field name="Footprint">Diode_SMD:D_SMA</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
+      <property name="Manufacturer" value="MDD"/>
+      <property name="MPN" value="SS34"/>
+      <property name="JLC/LCSC" value="C8678"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="USB-to-system Schottky; anode USB, cathode SYS_RAW"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="diode Schottky"/>
+      <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c4cd3f51-6c3a-4b91-9f5f-6ee519d606c6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D2">
+      <value>KT-0603R</value>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Hubei KENTO</field>
+        <field name="MPN">KT-0603R</field>
+        <field name="JLC/LCSC">C2286</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">On-board status LED</field>
+        <field name="Footprint">LED_SMD:LED_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Manufacturer" value="Hubei KENTO"/>
+      <property name="MPN" value="KT-0603R"/>
+      <property name="JLC/LCSC" value="C2286"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="On-board status LED"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>aadfd7f7-75ee-4502-8313-e846beebd7f4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D3">
+      <value>KT-0603R</value>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Hubei KENTO</field>
+        <field name="MPN">KT-0603R</field>
+        <field name="JLC/LCSC">C2286</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">TP4056 charging indicator; on while charging</field>
+        <field name="Footprint">LED_SMD:LED_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Manufacturer" value="Hubei KENTO"/>
+      <property name="MPN" value="KT-0603R"/>
+      <property name="JLC/LCSC" value="C2286"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="TP4056 charging indicator; on while charging"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>468e6b84-2bee-454d-af90-0f6262aa1cd2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="F1">
+      <value>1206L200PR 2A hold / 3.5A trip</value>
+      <footprint>Fuse:Fuse_1206_3216Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Littelfuse</field>
+        <field name="MPN">1206L200PR</field>
+        <field name="JLC/LCSC">C151163</field>
+        <field name="JLC Classification">Extended</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">Resettable system fault protection</field>
+        <field name="Footprint">Fuse:Fuse_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <property name="Manufacturer" value="Littelfuse"/>
+      <property name="MPN" value="1206L200PR"/>
+      <property name="JLC/LCSC" value="C151163"/>
+      <property name="JLC Classification" value="Extended"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="Resettable system fault protection"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="resettable fuse PTC PPTC polyfuse polyswitch"/>
+      <property name="ki_fp_filters" value="*polyfuse* *PTC*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9020cb90-3063-46d1-b947-af564bc71796</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1">
+      <value>USB-C / charge + program</value>
+      <footprint>Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12</footprint>
+      <fields>
+        <field name="Manufacturer">Korean Hroparts Elec</field>
+        <field name="MPN">TYPE-C-31-M-12</field>
+        <field name="JLC/LCSC">C165948</field>
+        <field name="JLC Classification">Extended</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">USB 2.0 sink; shell grounded</field>
+        <field name="Footprint">Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="USB_C_Receptacle_USB2.0_16P" description="USB 2.0-only 16P Type-C Receptacle connector"/>
+      <property name="Manufacturer" value="Korean Hroparts Elec"/>
+      <property name="MPN" value="TYPE-C-31-M-12"/>
+      <property name="JLC/LCSC" value="C165948"/>
+      <property name="JLC Classification" value="Extended"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="USB 2.0 sink; shell grounded"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="usb universal serial bus type-C USB2.0"/>
+      <property name="ki_fp_filters" value="USB*C*Receptacle*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9a6fbcc6-36bd-4e7b-b5a4-557134ee1780</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="SH"/>
+            <pin num="A1"/>
+            <pin num="A12"/>
+            <pin num="B1"/>
+            <pin num="B12"/>
+            <pin num="A4"/>
+            <pin num="A9"/>
+            <pin num="B4"/>
+            <pin num="B9"/>
+            <pin num="A5"/>
+            <pin num="B5"/>
+            <pin num="A7"/>
+            <pin num="B7"/>
+            <pin num="A6"/>
+            <pin num="B6"/>
+            <pin num="A8"/>
+            <pin num="B8"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J2">
+      <value>BAT+ / BAT-</value>
+      <footprint>walkiepcb:WirePads_2_P5.08mm</footprint>
+      <fields>
+        <field name="Manufacturer">Hand-wired</field>
+        <field name="MPN">2 solder pads</field>
+        <field name="JLC/LCSC"/>
+        <field name="JLC Classification">DNP</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">YES</field>
+        <field name="Notes">Battery wires; BAT- is cell negative before protection FETs</field>
+        <field name="Footprint">walkiepcb:WirePads_2_P5.08mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Hand-wired"/>
+      <property name="MPN" value="2 solder pads"/>
+      <property name="JLC/LCSC" value=""/>
+      <property name="JLC Classification" value="DNP"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="YES"/>
+      <property name="Notes" value="Battery wires; BAT- is cell negative before protection FETs"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>326a3d1b-9432-4fbc-b05e-939ba96d1b16</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J3">
+      <value>SW_PWR_IN / SW_PWR_OUT</value>
+      <footprint>walkiepcb:WirePads_2_P5.08mm</footprint>
+      <fields>
+        <field name="Manufacturer">Hand-wired</field>
+        <field name="MPN">2 solder pads</field>
+        <field name="JLC/LCSC"/>
+        <field name="JLC Classification">DNP</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">YES</field>
+        <field name="Notes">External series power switch; exactly two holes</field>
+        <field name="Footprint">walkiepcb:WirePads_2_P5.08mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Hand-wired"/>
+      <property name="MPN" value="2 solder pads"/>
+      <property name="JLC/LCSC" value=""/>
+      <property name="JLC Classification" value="DNP"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="YES"/>
+      <property name="Notes" value="External series power switch; exactly two holes"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>253940da-ddb3-4d23-af58-70b8332e9273</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J4">
+      <value>SPK+ / SPK-</value>
+      <footprint>walkiepcb:WirePads_2_P5.08mm</footprint>
+      <fields>
+        <field name="Manufacturer">Hand-wired</field>
+        <field name="MPN">2 solder pads</field>
+        <field name="JLC/LCSC"/>
+        <field name="JLC Classification">DNP</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">YES</field>
+        <field name="Notes">Differential Class-D output; neither terminal is ground</field>
+        <field name="Footprint">walkiepcb:WirePads_2_P5.08mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Hand-wired"/>
+      <property name="MPN" value="2 solder pads"/>
+      <property name="JLC/LCSC" value=""/>
+      <property name="JLC Classification" value="DNP"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="YES"/>
+      <property name="Notes" value="Differential Class-D output; neither terminal is ground"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b522a43f-f1ae-496c-97e9-0eb8f127770a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J5">
+      <value>3V3 / POT_ADC / GND</value>
+      <footprint>walkiepcb:WirePads_3_P2.54mm</footprint>
+      <fields>
+        <field name="Manufacturer">Hand-wired</field>
+        <field name="MPN">3 solder pads</field>
+        <field name="JLC/LCSC"/>
+        <field name="JLC Classification">DNP</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">YES</field>
+        <field name="Notes">External potentiometer; exactly three holes</field>
+        <field name="Footprint">walkiepcb:WirePads_3_P2.54mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Hand-wired"/>
+      <property name="MPN" value="3 solder pads"/>
+      <property name="JLC/LCSC" value=""/>
+      <property name="JLC Classification" value="DNP"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="YES"/>
+      <property name="Notes" value="External potentiometer; exactly three holes"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>48f34a60-41f7-4c80-a174-51bdace5e659</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J6">
+      <value>LED+ / LED-</value>
+      <footprint>walkiepcb:WirePads_2_P2.54mm</footprint>
+      <fields>
+        <field name="Manufacturer">Hand-wired</field>
+        <field name="MPN">2 solder pads</field>
+        <field name="JLC/LCSC"/>
+        <field name="JLC Classification">DNP</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">YES</field>
+        <field name="Notes">External LED; exactly two holes</field>
+        <field name="Footprint">walkiepcb:WirePads_2_P2.54mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Hand-wired"/>
+      <property name="MPN" value="2 solder pads"/>
+      <property name="JLC/LCSC" value=""/>
+      <property name="JLC Classification" value="DNP"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="YES"/>
+      <property name="Notes" value="External LED; exactly two holes"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3658c971-dbfd-410c-9122-59977a9742a2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J7">
+      <value>OLED MODULE: GND / 3V3 / SCL / SDA</value>
+      <footprint>walkiepcb:OLED_1x04_P2.54mm_HolesOnly</footprint>
+      <fields>
+        <field name="Manufacturer">Hand-wired</field>
+        <field name="MPN">2.54mm 1x4 header</field>
+        <field name="JLC/LCSC"/>
+        <field name="JLC Classification">DNP</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">YES</field>
+        <field name="Notes">For a commercial SSD1306 I2C module; verify the module pin order before wiring</field>
+        <field name="Footprint">walkiepcb:OLED_1x04_P2.54mm_HolesOnly</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Hand-wired"/>
+      <property name="MPN" value="2.54mm 1x4 header"/>
+      <property name="JLC/LCSC" value=""/>
+      <property name="JLC Classification" value="DNP"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="YES"/>
+      <property name="Notes" value="For a commercial SSD1306 I2C module; verify the module pin order before wiring"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5e25ab55-79d2-4032-a719-75bd09c1c267</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L1">
+      <value>2.2uH / 4.2A Isat</value>
+      <footprint>Inductor_SMD:L_Murata_DFE201610P</footprint>
+      <fields>
+        <field name="Manufacturer">Sunlord</field>
+        <field name="MPN">MWTC201610S2R2MT</field>
+        <field name="JLC/LCSC">C6807735</field>
+        <field name="JLC Classification">Extended</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">123mohm; 2.3A Irms; 4.2A Isat; buck-boost energy-transfer inductor</field>
+        <field name="Footprint">Inductor_SMD:L_Murata_DFE201610P</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="L" description="Inductor"/>
+      <property name="Manufacturer" value="Sunlord"/>
+      <property name="MPN" value="MWTC201610S2R2MT"/>
+      <property name="JLC/LCSC" value="C6807735"/>
+      <property name="JLC Classification" value="Extended"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="123mohm; 2.3A Irms; 4.2A Isat; buck-boost energy-transfer inductor"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
+      <property name="ki_fp_filters" value="Choke_* *Coil* Inductor_* L_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e56e942e-72f3-450c-9079-af64bcba5ec5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="MK1">
+      <value>ICS-43432 (bottom-port I2S)</value>
+      <footprint>walkiepcb:ICS-43432_LGA7_4x3mm</footprint>
+      <fields>
+        <field name="Manufacturer">TDK InvenSense</field>
+        <field name="MPN">ICS-43432</field>
+        <field name="JLC/LCSC">C574021</field>
+        <field name="JLC Classification">Extended</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">Economic-compatible but high-difficulty assembly; stocked bottom-port I2S microphone</field>
+        <field name="Footprint">walkiepcb:ICS-43432_LGA7_4x3mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x07" description="Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="TDK InvenSense"/>
+      <property name="MPN" value="ICS-43432"/>
+      <property name="JLC/LCSC" value="C574021"/>
+      <property name="JLC Classification" value="Extended"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="Economic-compatible but high-difficulty assembly; stocked bottom-port I2S microphone"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>de97ef1e-04de-4a3b-9cde-026c1907d74d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q1">
+      <value>MMBT3904</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <fields>
+        <field name="Manufacturer">CJ (Changjiang Electronics Tech)</field>
+        <field name="MPN">MMBT3904</field>
+        <field name="JLC/LCSC">C20526</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">CH340C DTR/RTS automatic-programming transistor</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Transistor_BJT" part="Q_NPN_BEC" description="NPN transistor, base/emitter/collector"/>
+      <property name="Manufacturer" value="CJ (Changjiang Electronics Tech)"/>
+      <property name="MPN" value="MMBT3904"/>
+      <property name="JLC/LCSC" value="C20526"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="CH340C DTR/RTS automatic-programming transistor"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="BJT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bf3a30e3-dffa-46eb-af84-0af5b65a9487</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q2">
+      <value>MMBT3904</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <fields>
+        <field name="Manufacturer">CJ (Changjiang Electronics Tech)</field>
+        <field name="MPN">MMBT3904</field>
+        <field name="JLC/LCSC">C20526</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">CH340C DTR/RTS automatic-programming transistor</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Transistor_BJT" part="Q_NPN_BEC" description="NPN transistor, base/emitter/collector"/>
+      <property name="Manufacturer" value="CJ (Changjiang Electronics Tech)"/>
+      <property name="MPN" value="MMBT3904"/>
+      <property name="JLC/LCSC" value="C20526"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="CH340C DTR/RTS automatic-programming transistor"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="BJT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a2be7cbd-68d2-4914-9517-1d4fece8d924</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q3">
+      <value>FS8205A dual NMOS</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-6</footprint>
+      <fields>
+        <field name="Manufacturer">FUXINSEMI</field>
+        <field name="MPN">FS8205A</field>
+        <field name="JLC/LCSC">C908265</field>
+        <field name="JLC Classification">Extended</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">Back-to-back common-drain battery-protection MOSFET; verified FUXINSEMI pinout</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x06" description="Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="FUXINSEMI"/>
+      <property name="MPN" value="FS8205A"/>
+      <property name="JLC/LCSC" value="C908265"/>
+      <property name="JLC Classification" value="Extended"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="Back-to-back common-drain battery-protection MOSFET; verified FUXINSEMI pinout"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6d872197-eb82-41fc-8a3e-5f73a70cc431</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q4">
+      <value>AO3401A</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <fields>
+        <field name="Manufacturer">Alpha &amp; Omega Semiconductor</field>
+        <field name="MPN">AO3401A</field>
+        <field name="JLC/LCSC">C15127</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">P-channel ideal battery path; S=SYS_RAW D=BAT_CELL</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Transistor_FET" part="AO3401A" description="-4.0A Id, -30V Vds, P-Channel MOSFET, SOT-23"/>
+      <property name="Manufacturer" value="Alpha &amp; Omega Semiconductor"/>
+      <property name="MPN" value="AO3401A"/>
+      <property name="JLC/LCSC" value="C15127"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="P-channel ideal battery path; S=SYS_RAW D=BAT_CELL"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="P-Channel MOSFET"/>
+      <property name="ki_fp_filters" value="SOT?23*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d21d066c-c9e9-4ce5-8794-e161ff84e86b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1">
+      <value>5.1k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="Manufacturer">UNI-ROYAL</field>
+        <field name="MPN">0603WAF5101T5E</field>
+        <field name="JLC/LCSC">C23186</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">USB-C Rd</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
+      <property name="MPN" value="0603WAF5101T5E"/>
+      <property name="JLC/LCSC" value="C23186"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="USB-C Rd"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b9bde263-360c-46b9-bd7d-b76391c37b57</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R2">
+      <value>5.1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">UNI-ROYAL</field>
+        <field name="MPN">0603WAF5101T5E</field>
+        <field name="JLC/LCSC">C23186</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">USB-C Rd</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
+      <property name="MPN" value="0603WAF5101T5E"/>
+      <property name="JLC/LCSC" value="C23186"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="USB-C Rd"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>443e2505-3a30-48e1-aa81-6f78b497eb99</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R3">
+      <value>22</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">UNI-ROYAL</field>
+        <field name="MPN">0603WAF220JT5E</field>
+        <field name="JLC/LCSC">C23345</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">USB D- series termination; place near CH340C</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
+      <property name="MPN" value="0603WAF220JT5E"/>
+      <property name="JLC/LCSC" value="C23345"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="USB D- series termination; place near CH340C"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9d149355-8dfc-4fd1-822a-8ee9d3641fe4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R4">
+      <value>22</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">UNI-ROYAL</field>
+        <field name="MPN">0603WAF220JT5E</field>
+        <field name="JLC/LCSC">C23345</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">USB D+ series termination; place near CH340C</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
+      <property name="MPN" value="0603WAF220JT5E"/>
+      <property name="JLC/LCSC" value="C23345"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="USB D+ series termination; place near CH340C"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>32df5c5e-c1e3-48ca-b80f-a357a66f3152</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R5">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">UNI-ROYAL</field>
+        <field name="MPN">0603WAF1002T5E</field>
+        <field name="JLC/LCSC">C25804</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">ESP32 EN pull-up</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
+      <property name="MPN" value="0603WAF1002T5E"/>
+      <property name="JLC/LCSC" value="C25804"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="ESP32 EN pull-up"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b1d4a06b-252c-486c-8323-384cd89e7e2c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R6">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">UNI-ROYAL</field>
+        <field name="MPN">0603WAF1002T5E</field>
+        <field name="JLC/LCSC">C25804</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">ESP32 boot pull-up</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
+      <property name="MPN" value="0603WAF1002T5E"/>
+      <property name="JLC/LCSC" value="C25804"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="ESP32 boot pull-up"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>40a0c353-de79-46df-84a9-ff2070f18746</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R7">
+      <value>2.4k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">UNI-ROYAL</field>
+        <field name="MPN">0603WAF2401T5E</field>
+        <field name="JLC/LCSC">C22940</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">Sets TP4056 current ≈500mA</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
+      <property name="MPN" value="0603WAF2401T5E"/>
+      <property name="JLC/LCSC" value="C22940"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="Sets TP4056 current ≈500mA"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b81b1ad4-0c07-432a-82b1-b85e560100e3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R8">
+      <value>100</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">UNI-ROYAL</field>
+        <field name="MPN">0603WAF1000T5E</field>
+        <field name="JLC/LCSC">C22775</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">DW01 supply filter</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
+      <property name="MPN" value="0603WAF1000T5E"/>
+      <property name="JLC/LCSC" value="C22775"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="DW01 supply filter"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4ffd8fb5-a63d-4907-a53b-c6b9041c1fb0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R9">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">UNI-ROYAL</field>
+        <field name="MPN">0603WAF1001T5E</field>
+        <field name="JLC/LCSC">C21190</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">DW01 current-sense input filter</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
+      <property name="MPN" value="0603WAF1001T5E"/>
+      <property name="JLC/LCSC" value="C21190"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="DW01 current-sense input filter"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>49da9888-ccfa-4e1e-bca1-de3262533daf</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R10">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">UNI-ROYAL</field>
+        <field name="MPN">0603WAF1003T5E</field>
+        <field name="JLC/LCSC">C25803</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">PMOS gate pull-down</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
+      <property name="MPN" value="0603WAF1003T5E"/>
+      <property name="JLC/LCSC" value="C25803"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="PMOS gate pull-down"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>82df5fd2-f842-4e88-83ee-28f168b9bc18</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R13">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">UNI-ROYAL</field>
+        <field name="MPN">0603WAF1003T5E</field>
+        <field name="JLC/LCSC">C25803</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">Battery divider upper</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
+      <property name="MPN" value="0603WAF1003T5E"/>
+      <property name="JLC/LCSC" value="C25803"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="Battery divider upper"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4588fc1e-18f8-4d99-85ec-c5246962548b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R14">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">UNI-ROYAL</field>
+        <field name="MPN">0603WAF1003T5E</field>
+        <field name="JLC/LCSC">C25803</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">Battery divider lower</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
+      <property name="MPN" value="0603WAF1003T5E"/>
+      <property name="JLC/LCSC" value="C25803"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="Battery divider lower"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ca9c9f9e-2291-4059-833b-1b226cd4e8dc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R15">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">UNI-ROYAL</field>
+        <field name="MPN">0603WAF4701T5E</field>
+        <field name="JLC/LCSC">C23162</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">I2C pull-up</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
+      <property name="MPN" value="0603WAF4701T5E"/>
+      <property name="JLC/LCSC" value="C23162"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="I2C pull-up"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3d423db6-8068-4adb-b457-d3ca8f7edd62</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R16">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">UNI-ROYAL</field>
+        <field name="MPN">0603WAF4701T5E</field>
+        <field name="JLC/LCSC">C23162</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">I2C pull-up</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
+      <property name="MPN" value="0603WAF4701T5E"/>
+      <property name="JLC/LCSC" value="C23162"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="I2C pull-up"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>66a8d0af-be3f-4394-9967-6832c09a301c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R19">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">UNI-ROYAL</field>
+        <field name="MPN">0603WAF1003T5E</field>
+        <field name="JLC/LCSC">C25803</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">Keeps amplifier shut down during boot</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
+      <property name="MPN" value="0603WAF1003T5E"/>
+      <property name="JLC/LCSC" value="C25803"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="Keeps amplifier shut down during boot"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>591c7ca2-2bc1-440e-b31f-ce8d5fdae34c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R20">
+      <value>2.4k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">UNI-ROYAL</field>
+        <field name="MPN">0603WAF2401T5E</field>
+        <field name="JLC/LCSC">C22940</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">Limits SD_MODE clamp current if raw VDD falls below 3V3</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
+      <property name="MPN" value="0603WAF2401T5E"/>
+      <property name="JLC/LCSC" value="C22940"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="Limits SD_MODE clamp current if raw VDD falls below 3V3"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>79fad815-2915-4d14-80c0-5c1cb34c569c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R21">
+      <value>330</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">UNI-ROYAL</field>
+        <field name="MPN">0603WAF3300T5E</field>
+        <field name="JLC/LCSC">C23138</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">≈3.9mA for 2.0V LED at 3.3V</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
+      <property name="MPN" value="0603WAF3300T5E"/>
+      <property name="JLC/LCSC" value="C23138"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="≈3.9mA for 2.0V LED at 3.3V"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c9ba601f-904c-40f8-b5af-3cc692e6f98a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R22">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">UNI-ROYAL</field>
+        <field name="MPN">0603WAF1002T5E</field>
+        <field name="JLC/LCSC">C25804</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">CH340C automatic-programming transistor base resistor</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
+      <property name="MPN" value="0603WAF1002T5E"/>
+      <property name="JLC/LCSC" value="C25804"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="CH340C automatic-programming transistor base resistor"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f989bdd8-d1a6-4098-af53-1112265b7c51</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R23">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">UNI-ROYAL</field>
+        <field name="MPN">0603WAF1002T5E</field>
+        <field name="JLC/LCSC">C25804</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">CH340C automatic-programming transistor base resistor</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
+      <property name="MPN" value="0603WAF1002T5E"/>
+      <property name="JLC/LCSC" value="C25804"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="CH340C automatic-programming transistor base resistor"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7889b3a8-7c13-44e0-a89c-1ca0c80266b8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R24">
+      <value>330</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">UNI-ROYAL</field>
+        <field name="MPN">0603WAF3300T5E</field>
+        <field name="JLC/LCSC">C23138</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">Indicator current limit; reuses existing Basic BOM line</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
+      <property name="MPN" value="0603WAF3300T5E"/>
+      <property name="JLC/LCSC" value="C23138"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="Indicator current limit; reuses existing Basic BOM line"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>293175d1-41b9-4277-afe7-ed83f2e71d35</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R25">
+      <value>330</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">UNI-ROYAL</field>
+        <field name="MPN">0603WAF3300T5E</field>
+        <field name="JLC/LCSC">C23138</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">Indicator current limit; reuses existing Basic BOM line</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
+      <property name="MPN" value="0603WAF3300T5E"/>
+      <property name="JLC/LCSC" value="C23138"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="Indicator current limit; reuses existing Basic BOM line"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c3eb3d94-b27c-4f2a-afce-b8a89bfb892b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R26">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="Manufacturer">UNI-ROYAL</field>
+        <field name="MPN">0402WGF1003TCE</field>
+        <field name="JLC/LCSC">C25741</field>
+        <field name="JLC Classification">Basic</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">ICS-43432 SD pulldown required while microphone output is tri-stated</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
+      <property name="MPN" value="0402WGF1003TCE"/>
+      <property name="JLC/LCSC" value="C25741"/>
+      <property name="JLC Classification" value="Basic"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="ICS-43432 SD pulldown required while microphone output is tri-stated"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>305f69e3-93e4-42f5-9354-82af9559ebb0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW1">
+      <value>BTN1 / hand-solder</value>
+      <footprint>walkiepcb:SW_Tactile_2Pin_6x6mm_P5.0mm</footprint>
+      <fields>
+        <field name="Manufacturer">E-Switch or equivalent</field>
+        <field name="MPN">TL1100F100QG</field>
+        <field name="JLC/LCSC"/>
+        <field name="JLC Classification">DNP</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">YES</field>
+        <field name="Notes">Exactly two plated holes; ESP32 internal pull-up</field>
+        <field name="Footprint">walkiepcb:SW_Tactile_2Pin_6x6mm_P5.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Manufacturer" value="E-Switch or equivalent"/>
+      <property name="MPN" value="TL1100F100QG"/>
+      <property name="JLC/LCSC" value=""/>
+      <property name="JLC Classification" value="DNP"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="YES"/>
+      <property name="Notes" value="Exactly two plated holes; ESP32 internal pull-up"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4b4cffff-7d37-4eef-9351-1e0eea232b9c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW2">
+      <value>BTN2 / hand-solder</value>
+      <footprint>walkiepcb:SW_Tactile_2Pin_6x6mm_P5.0mm</footprint>
+      <fields>
+        <field name="Manufacturer">E-Switch or equivalent</field>
+        <field name="MPN">TL1100F100QG</field>
+        <field name="JLC/LCSC"/>
+        <field name="JLC Classification">DNP</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">YES</field>
+        <field name="Notes">Exactly two plated holes; ESP32 internal pull-up</field>
+        <field name="Footprint">walkiepcb:SW_Tactile_2Pin_6x6mm_P5.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Manufacturer" value="E-Switch or equivalent"/>
+      <property name="MPN" value="TL1100F100QG"/>
+      <property name="JLC/LCSC" value=""/>
+      <property name="JLC Classification" value="DNP"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="YES"/>
+      <property name="Notes" value="Exactly two plated holes; ESP32 internal pull-up"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3968d192-a66e-4594-9c0f-4fe60dd99c66</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW3">
+      <value>BTN3 / hand-solder</value>
+      <footprint>walkiepcb:SW_Tactile_2Pin_6x6mm_P5.0mm</footprint>
+      <fields>
+        <field name="Manufacturer">E-Switch or equivalent</field>
+        <field name="MPN">TL1100F100QG</field>
+        <field name="JLC/LCSC"/>
+        <field name="JLC Classification">DNP</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">YES</field>
+        <field name="Notes">Exactly two plated holes; ESP32 internal pull-up</field>
+        <field name="Footprint">walkiepcb:SW_Tactile_2Pin_6x6mm_P5.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Manufacturer" value="E-Switch or equivalent"/>
+      <property name="MPN" value="TL1100F100QG"/>
+      <property name="JLC/LCSC" value=""/>
+      <property name="JLC Classification" value="DNP"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="YES"/>
+      <property name="Notes" value="Exactly two plated holes; ESP32 internal pull-up"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>25f5647d-055b-459b-af4b-398cd1caf70d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW4">
+      <value>BTN4 / hand-solder</value>
+      <footprint>walkiepcb:SW_Tactile_2Pin_6x6mm_P5.0mm</footprint>
+      <fields>
+        <field name="Manufacturer">E-Switch or equivalent</field>
+        <field name="MPN">TL1100F100QG</field>
+        <field name="JLC/LCSC"/>
+        <field name="JLC Classification">DNP</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">YES</field>
+        <field name="Notes">Exactly two plated holes; ESP32 internal pull-up</field>
+        <field name="Footprint">walkiepcb:SW_Tactile_2Pin_6x6mm_P5.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Manufacturer" value="E-Switch or equivalent"/>
+      <property name="MPN" value="TL1100F100QG"/>
+      <property name="JLC/LCSC" value=""/>
+      <property name="JLC Classification" value="DNP"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="YES"/>
+      <property name="Notes" value="Exactly two plated holes; ESP32 internal pull-up"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8f50ccd2-7e03-4d39-9bdd-eea7497e3a88</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW5">
+      <value>BTN5 / hand-solder</value>
+      <footprint>walkiepcb:SW_Tactile_2Pin_6x6mm_P5.0mm</footprint>
+      <fields>
+        <field name="Manufacturer">E-Switch or equivalent</field>
+        <field name="MPN">TL1100F100QG</field>
+        <field name="JLC/LCSC"/>
+        <field name="JLC Classification">DNP</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">YES</field>
+        <field name="Notes">Exactly two plated holes; ESP32 internal pull-up</field>
+        <field name="Footprint">walkiepcb:SW_Tactile_2Pin_6x6mm_P5.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Manufacturer" value="E-Switch or equivalent"/>
+      <property name="MPN" value="TL1100F100QG"/>
+      <property name="JLC/LCSC" value=""/>
+      <property name="JLC Classification" value="DNP"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="YES"/>
+      <property name="Notes" value="Exactly two plated holes; ESP32 internal pull-up"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d0d17367-0adf-4536-b1f9-7ec383fd5030</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP1">
+      <value>3V3</value>
+      <footprint>walkiepcb:TestPad_1.0mm</footprint>
+      <fields>
+        <field name="Manufacturer">PCB pad</field>
+        <field name="MPN">SMD test pad</field>
+        <field name="JLC/LCSC"/>
+        <field name="JLC Classification">PCB</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">YES</field>
+        <field name="Notes">Probe-only test pad</field>
+        <field name="Footprint">walkiepcb:TestPad_1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Manufacturer" value="PCB pad"/>
+      <property name="MPN" value="SMD test pad"/>
+      <property name="JLC/LCSC" value=""/>
+      <property name="JLC Classification" value="PCB"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="YES"/>
+      <property name="Notes" value="Probe-only test pad"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>df8e91d2-d3bb-48e4-bb49-ab81e680ef3d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP2">
+      <value>GND</value>
+      <footprint>walkiepcb:TestPad_1.0mm</footprint>
+      <fields>
+        <field name="Manufacturer">PCB pad</field>
+        <field name="MPN">SMD test pad</field>
+        <field name="JLC/LCSC"/>
+        <field name="JLC Classification">PCB</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">YES</field>
+        <field name="Notes">Probe-only test pad</field>
+        <field name="Footprint">walkiepcb:TestPad_1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Manufacturer" value="PCB pad"/>
+      <property name="MPN" value="SMD test pad"/>
+      <property name="JLC/LCSC" value=""/>
+      <property name="JLC Classification" value="PCB"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="YES"/>
+      <property name="Notes" value="Probe-only test pad"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>51a6906f-d60d-4e77-85d0-c125354d7bb8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP3">
+      <value>TX0</value>
+      <footprint>walkiepcb:TestPad_1.0mm</footprint>
+      <fields>
+        <field name="Manufacturer">PCB pad</field>
+        <field name="MPN">SMD test pad</field>
+        <field name="JLC/LCSC"/>
+        <field name="JLC Classification">PCB</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">YES</field>
+        <field name="Notes">Probe-only test pad</field>
+        <field name="Footprint">walkiepcb:TestPad_1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Manufacturer" value="PCB pad"/>
+      <property name="MPN" value="SMD test pad"/>
+      <property name="JLC/LCSC" value=""/>
+      <property name="JLC Classification" value="PCB"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="YES"/>
+      <property name="Notes" value="Probe-only test pad"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4ec671df-af9c-4cc7-af30-3a3d36a7d8db</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP4">
+      <value>RX0</value>
+      <footprint>walkiepcb:TestPad_1.0mm</footprint>
+      <fields>
+        <field name="Manufacturer">PCB pad</field>
+        <field name="MPN">SMD test pad</field>
+        <field name="JLC/LCSC"/>
+        <field name="JLC Classification">PCB</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">YES</field>
+        <field name="Notes">Probe-only test pad</field>
+        <field name="Footprint">walkiepcb:TestPad_1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Manufacturer" value="PCB pad"/>
+      <property name="MPN" value="SMD test pad"/>
+      <property name="JLC/LCSC" value=""/>
+      <property name="JLC Classification" value="PCB"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="YES"/>
+      <property name="Notes" value="Probe-only test pad"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7efcdc65-ad1d-4293-85a2-86704f9ecfb8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP5">
+      <value>EN</value>
+      <footprint>walkiepcb:TestPad_1.0mm</footprint>
+      <fields>
+        <field name="Manufacturer">PCB pad</field>
+        <field name="MPN">SMD test pad</field>
+        <field name="JLC/LCSC"/>
+        <field name="JLC Classification">PCB</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">YES</field>
+        <field name="Notes">Probe-only test pad</field>
+        <field name="Footprint">walkiepcb:TestPad_1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Manufacturer" value="PCB pad"/>
+      <property name="MPN" value="SMD test pad"/>
+      <property name="JLC/LCSC" value=""/>
+      <property name="JLC Classification" value="PCB"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="YES"/>
+      <property name="Notes" value="Probe-only test pad"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bdf15794-230c-4642-941a-0b30aeac9c6d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP6">
+      <value>GPIO0</value>
+      <footprint>walkiepcb:TestPad_1.0mm</footprint>
+      <fields>
+        <field name="Manufacturer">PCB pad</field>
+        <field name="MPN">SMD test pad</field>
+        <field name="JLC/LCSC"/>
+        <field name="JLC Classification">PCB</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">YES</field>
+        <field name="Notes">Probe-only test pad</field>
+        <field name="Footprint">walkiepcb:TestPad_1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Manufacturer" value="PCB pad"/>
+      <property name="MPN" value="SMD test pad"/>
+      <property name="JLC/LCSC" value=""/>
+      <property name="JLC Classification" value="PCB"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="YES"/>
+      <property name="Notes" value="Probe-only test pad"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a0b32d20-5f01-4696-b136-f3fdfe0cce4f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP7">
+      <value>LED_STATUS</value>
+      <footprint>walkiepcb:TestPad_1.0mm</footprint>
+      <fields>
+        <field name="Manufacturer">PCB pad</field>
+        <field name="MPN">SMD test pad</field>
+        <field name="JLC/LCSC"/>
+        <field name="JLC Classification">PCB</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">YES</field>
+        <field name="Notes">Optional expansion solder/test pad</field>
+        <field name="Footprint">walkiepcb:TestPad_1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Manufacturer" value="PCB pad"/>
+      <property name="MPN" value="SMD test pad"/>
+      <property name="JLC/LCSC" value=""/>
+      <property name="JLC Classification" value="PCB"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="YES"/>
+      <property name="Notes" value="Optional expansion solder/test pad"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>48035194-6a2e-4891-9970-da04f35f22f6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP8">
+      <value>GPIO12</value>
+      <footprint>walkiepcb:TestPad_1.0mm</footprint>
+      <fields>
+        <field name="Manufacturer">PCB pad</field>
+        <field name="MPN">SMD test pad</field>
+        <field name="JLC/LCSC"/>
+        <field name="JLC Classification">PCB</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">YES</field>
+        <field name="Notes">Optional expansion solder/test pad</field>
+        <field name="Footprint">walkiepcb:TestPad_1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Manufacturer" value="PCB pad"/>
+      <property name="MPN" value="SMD test pad"/>
+      <property name="JLC/LCSC" value=""/>
+      <property name="JLC Classification" value="PCB"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="YES"/>
+      <property name="Notes" value="Optional expansion solder/test pad"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>956d07c0-2d31-4ccc-90d3-3d56de848c6e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1">
+      <value>USBLC6-2SC6</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-6</footprint>
+      <fields>
+        <field name="Manufacturer">STMicroelectronics</field>
+        <field name="MPN">USBLC6-2SC6</field>
+        <field name="JLC/LCSC">C7519</field>
+        <field name="JLC Classification">Extended</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">Low-capacitance USB ESD</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Power_Protection" part="USBLC6-2SC6" description="Very low capacitance ESD protection diode, 2 data-line, SOT-23-6"/>
+      <property name="Manufacturer" value="STMicroelectronics"/>
+      <property name="MPN" value="USBLC6-2SC6"/>
+      <property name="JLC/LCSC" value="C7519"/>
+      <property name="JLC Classification" value="Extended"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="Low-capacitance USB ESD"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="usb ethernet video"/>
+      <property name="ki_fp_filters" value="SOT?23*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3b657265-0050-4559-a1d9-20c9d0b24b16</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="5"/>
+            <pin num="2"/>
+            <pin num="6"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U2">
+      <value>CH340C</value>
+      <footprint>Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</footprint>
+      <fields>
+        <field name="Manufacturer">WCH</field>
+        <field name="MPN">CH340C</field>
+        <field name="JLC/LCSC">C7464026</field>
+        <field name="JLC Classification">Extended</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">Crystal-less USB-UART; VCC and V3 tied to switched 3V3; main switch must be ON for USB programming</field>
+        <field name="Footprint">Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Interface_USB" part="CH340C" description="USB serial converter, crystal-less, UART, SOIC-16"/>
+      <property name="Manufacturer" value="WCH"/>
+      <property name="MPN" value="CH340C"/>
+      <property name="JLC/LCSC" value="C7464026"/>
+      <property name="JLC Classification" value="Extended"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="Crystal-less USB-UART; VCC and V3 tied to switched 3V3; main switch must be ON for USB programming"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="USB UART Serial Converter Interface"/>
+      <property name="ki_fp_filters" value="SOIC*3.9x9.9mm*P1.27mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7e755354-1d53-42b2-b4a7-68f80857189c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="15"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="16"/>
+            <pin num="4"/>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="14"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U3">
+      <value>TP4056-42-ESOP8</value>
+      <footprint>Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm</footprint>
+      <fields>
+        <field name="Manufacturer">Top Power ASIC</field>
+        <field name="MPN">TP4056-42-ESOP8</field>
+        <field name="JLC/LCSC">C16581</field>
+        <field name="JLC Classification">Extended</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">RPROG 2.4k gives nominal 500mA; EP grounded</field>
+        <field name="Footprint">Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Battery_Management" part="TP4056-42-ESOP8" description="1A Standalone Linear Li-ion/LiPo single-cell battery charger, 4.2V ±1% charge voltage, VCC = 4.0..8.0V, SOIC-8 (SOP-8)"/>
+      <property name="Manufacturer" value="Top Power ASIC"/>
+      <property name="MPN" value="TP4056-42-ESOP8"/>
+      <property name="JLC/LCSC" value="C16581"/>
+      <property name="JLC Classification" value="Extended"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="RPROG 2.4k gives nominal 500mA; EP grounded"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="lithium-ion lithium-polymer Li-Poly"/>
+      <property name="ki_fp_filters" value="*SO*3.9x4.*P1.27mm*EP2.4*x3.3*mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fe5e8df7-4497-459a-85fd-8dac80cd5b83</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="8"/>
+            <pin num="7"/>
+            <pin num="6"/>
+            <pin num="9"/>
+            <pin num="4"/>
+            <pin num="3"/>
+            <pin num="5"/>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U4">
+      <value>DW01A</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-6</footprint>
+      <fields>
+        <field name="Manufacturer">PUOLOP</field>
+        <field name="MPN">DW01A</field>
+        <field name="JLC/LCSC">C351410</field>
+        <field name="JLC Classification">Extended</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">1S protector; 4.3V overcharge / 2.5V overdischarge; deep-discharge cutoff is safety backup</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Battery_Management" part="DW01A" description="Overcharge, overcurrent and overdischarge protection IC for single cell lithium-ion/polymer battery"/>
+      <property name="Manufacturer" value="PUOLOP"/>
+      <property name="MPN" value="DW01A"/>
+      <property name="JLC/LCSC" value="C351410"/>
+      <property name="JLC Classification" value="Extended"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="1S protector; 4.3V overcharge / 2.5V overdischarge; deep-discharge cutoff is safety backup"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="battery protection li-ion lipo overcurrent overdischarge overcharge"/>
+      <property name="ki_fp_filters" value="SOT?23*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4b97cf44-51ea-43eb-9e4f-aeb0b1540e69</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U5">
+      <value>TPS63021DSJR</value>
+      <footprint>Package_DFN_QFN:DFN-14-1EP_3x4mm_P0.5mm_EP1.7x3.3mm</footprint>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">TPS63021DSJR</field>
+        <field name="JLC/LCSC">C202140</field>
+        <field name="JLC Classification">Extended</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">Fixed 3.3V synchronous buck-boost; pin15 models exposed PGND pad; PS/SYNC low = power-save; EN tied VIN</field>
+        <field name="Footprint">Package_DFN_QFN:DFN-14-1EP_3x4mm_P0.5mm_EP1.7x3.3mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x15" description="Generic connector, single row, 01x15, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="TPS63021DSJR"/>
+      <property name="JLC/LCSC" value="C202140"/>
+      <property name="JLC Classification" value="Extended"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="Fixed 3.3V synchronous buck-boost; pin15 models exposed PGND pad; PS/SYNC low = power-save; EN tied VIN"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>77d08745-c96d-41c4-8b7d-752583c57b73</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="15"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U6">
+      <value>ESP32-WROOM-32D-N16</value>
+      <footprint>RF_Module:ESP32-WROOM-32</footprint>
+      <fields>
+        <field name="Manufacturer">Espressif Systems</field>
+        <field name="MPN">ESP32-WROOM-32D-N16</field>
+        <field name="JLC/LCSC">C529578</field>
+        <field name="JLC Classification">Extended</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">16MB flash; PCB antenna; CH340C UART programming</field>
+        <field name="Footprint">RF_Module:ESP32-WROOM-32</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RF_Module" part="ESP32-WROOM-32" description="RF Module, ESP32-D0WDQ6 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 2.7-3.6V, onboard antenna, SMD"/>
+      <property name="Manufacturer" value="Espressif Systems"/>
+      <property name="MPN" value="ESP32-WROOM-32D-N16"/>
+      <property name="JLC/LCSC" value="C529578"/>
+      <property name="JLC Classification" value="Extended"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="16MB flash; PCB antenna; CH340C UART programming"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="RF Radio BT ESP ESP32 Espressif onboard PCB antenna"/>
+      <property name="ki_fp_filters" value="ESP32?WROOM?32*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>15432e0e-5f05-4c2b-998d-2cac4c95316b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="21"/>
+            <pin num="22"/>
+            <pin num="17"/>
+            <pin num="18"/>
+            <pin num="20"/>
+            <pin num="19"/>
+            <pin num="32"/>
+            <pin num="2"/>
+            <pin num="1"/>
+            <pin num="38"/>
+            <pin num="39"/>
+            <pin num="15"/>
+            <pin num="25"/>
+            <pin num="35"/>
+            <pin num="24"/>
+            <pin num="34"/>
+            <pin num="26"/>
+            <pin num="29"/>
+            <pin num="14"/>
+            <pin num="16"/>
+            <pin num="13"/>
+            <pin num="23"/>
+            <pin num="27"/>
+            <pin num="28"/>
+            <pin num="30"/>
+            <pin num="31"/>
+            <pin num="33"/>
+            <pin num="36"/>
+            <pin num="37"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="6"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U7">
+      <value>MAX98357AETE+T</value>
+      <footprint>Package_DFN_QFN:TQFN-16-1EP_3x3mm_P0.5mm_EP1.23x1.23mm</footprint>
+      <fields>
+        <field name="Manufacturer">Analog Devices / Maxim</field>
+        <field name="MPN">MAX98357AETE+T</field>
+        <field name="JLC/LCSC">C910544</field>
+        <field name="JLC Classification">Extended</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">12dB fixed gain; left channel; EP grounded</field>
+        <field name="Footprint">Package_DFN_QFN:TQFN-16-1EP_3x3mm_P0.5mm_EP1.23x1.23mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Audio" part="MAX98357A" description="Mono DAC with amplifier, I2S, PCM, TDM, 32-bit, 96khz, 3.2W, TQFP-16"/>
+      <property name="Manufacturer" value="Analog Devices / Maxim"/>
+      <property name="MPN" value="MAX98357AETE+T"/>
+      <property name="JLC/LCSC" value="C910544"/>
+      <property name="JLC Classification" value="Extended"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="12dB fixed gain; left channel; EP grounded"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <property name="ki_keywords" value="pcm tdm i2s left-justified amplifier audio dac"/>
+      <property name="ki_fp_filters" value="TQFN*3x3mm*P0.5mm*EP1.23x1.23mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>60577fb1-ee8e-48c0-87ea-5500aceb9ec4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="16"/>
+            <pin num="14"/>
+            <pin num="4"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="11"/>
+            <pin num="15"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="17"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="9"/>
+            <pin num="10"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U8">
+      <value>Ra-01SH / SX1262 915MHz</value>
+      <footprint>walkiepcb:Ai-Thinker_Ra-01SH</footprint>
+      <fields>
+        <field name="Manufacturer">Ai-Thinker</field>
+        <field name="MPN">Ra-01SH</field>
+        <field name="JLC/LCSC">C2764087</field>
+        <field name="JLC Classification">Extended</field>
+        <field name="Economic Compatible">YES</field>
+        <field name="DNP">NO</field>
+        <field name="Notes">SX1262; 803-930MHz; integrated I-PEX socket; +22dBm</field>
+        <field name="Footprint">walkiepcb:Ai-Thinker_Ra-01SH</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="walkiepcb" part="Ra-01SH" description="SX1262 803-930 MHz LoRa/GFSK module with I-PEX antenna connector"/>
+      <property name="Manufacturer" value="Ai-Thinker"/>
+      <property name="MPN" value="Ra-01SH"/>
+      <property name="JLC/LCSC" value="C2764087"/>
+      <property name="JLC Classification" value="Extended"/>
+      <property name="Economic Compatible" value="YES"/>
+      <property name="DNP" value="NO"/>
+      <property name="Notes" value="SX1262; 803-930MHz; integrated I-PEX socket; +22dBm"/>
+      <property name="Sheetname" value="walkiepcb"/>
+      <property name="Sheetfile" value="walkiepcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>377ed226-ab16-452a-a60c-3d19c7789fb7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="11"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="9"/>
+            <pin num="16"/>
+            <pin num="6"/>
+            <pin num="10"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="15"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Audio" part="MAX98357A">
+      <description>Mono DAC with amplifier, I2S, PCM, TDM, 32-bit, 96khz, 3.2W, TQFP-16</description>
+      <docs>https://www.analog.com/media/en/technical-documentation/data-sheets/MAX98357A-MAX98357B.pdf</docs>
+      <footprints>
+        <fp>TQFN*3x3mm*P0.5mm*EP1.23x1.23mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MAX98357A</field>
+        <field name="Footprint">Package_DFN_QFN:TQFN-16-1EP_3x3mm_P0.5mm_EP1.23x1.23mm</field>
+        <field name="Datasheet">https://www.analog.com/media/en/technical-documentation/data-sheets/MAX98357A-MAX98357B.pdf</field>
+        <field name="Description">Mono DAC with amplifier, I2S, PCM, TDM, 32-bit, 96khz, 3.2W, TQFP-16</field>
+      </fields>
+      <pins>
+        <pin num="1" name="DIN" type="input"/>
+        <pin num="2" name="GAIN_SLOT" type="passive"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="~{SD_MODE}" type="input"/>
+        <pin num="5" name="NC" type="no_connect"/>
+        <pin num="6" name="NC" type="no_connect"/>
+        <pin num="7" name="VDD" type="power_in"/>
+        <pin num="8" name="VDD" type="passive"/>
+        <pin num="9" name="OUTP" type="output"/>
+        <pin num="10" name="OUTN" type="output"/>
+        <pin num="11" name="GND" type="passive"/>
+        <pin num="12" name="NC" type="no_connect"/>
+        <pin num="13" name="NC" type="no_connect"/>
+        <pin num="14" name="LRCLK" type="input"/>
+        <pin num="15" name="GND" type="passive"/>
+        <pin num="16" name="BCLK" type="input"/>
+        <pin num="17" name="PAD" type="unspecified"/>
+      </pins>
+    </libpart>
+    <libpart lib="Battery_Management" part="DW01A">
+      <description>Overcharge, overcurrent and overdischarge protection IC for single cell lithium-ion/polymer battery</description>
+      <docs>https://hmsemi.com/downfile/DW01A.PDF</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">DW01A</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
+        <field name="Datasheet">https://hmsemi.com/downfile/DW01A.PDF</field>
+        <field name="Description">Overcharge, overcurrent and overdischarge protection IC for single cell lithium-ion/polymer battery</field>
+      </fields>
+      <pins>
+        <pin num="1" name="OD" type="output"/>
+        <pin num="2" name="CS" type="input"/>
+        <pin num="3" name="OC" type="output"/>
+        <pin num="4" name="TD" type="no_connect"/>
+        <pin num="5" name="VCC" type="power_in"/>
+        <pin num="6" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Battery_Management" part="TP4056-42-ESOP8">
+      <description>1A Standalone Linear Li-ion/LiPo single-cell battery charger, 4.2V ±1% charge voltage, VCC = 4.0..8.0V, SOIC-8 (SOP-8)</description>
+      <docs>https://www.lcsc.com/datasheet/lcsc_datasheet_2410121619_TOPPOWER-Nanjing-Extension-Microelectronics-TP4056-42-ESOP8_C16581.pdf</docs>
+      <footprints>
+        <fp>*SO*3.9x4.*P1.27mm*EP2.4*x3.3*mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TP4056-42-ESOP8</field>
+        <field name="Footprint">Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm_ThermalVias</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2410121619_TOPPOWER-Nanjing-Extension-Microelectronics-TP4056-42-ESOP8_C16581.pdf</field>
+        <field name="Description">1A Standalone Linear Li-ion/LiPo single-cell battery charger, 4.2V ±1% charge voltage, VCC = 4.0..8.0V, SOIC-8 (SOP-8)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="TEMP" type="input"/>
+        <pin num="2" name="PROG" type="passive"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="V_{CC}" type="power_in"/>
+        <pin num="5" name="BAT" type="power_out"/>
+        <pin num="6" name="~{STDBY}" type="open_collector"/>
+        <pin num="7" name="~{CHRG}" type="open_collector"/>
+        <pin num="8" name="CE" type="input"/>
+        <pin num="9" name="EPAD" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="TestPoint">
+      <description>test point</description>
+      <footprints>
+        <fp>Pin*</fp>
+        <fp>Test*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TestPoint</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">test point</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="USB_C_Receptacle_USB2.0_16P">
+      <description>USB 2.0-only 16P Type-C Receptacle connector</description>
+      <docs>https://www.usb.org/sites/default/files/documents/usb_type-c.zip</docs>
+      <footprints>
+        <fp>USB*C*Receptacle*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">USB_C_Receptacle_USB2.0_16P</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.usb.org/sites/default/files/documents/usb_type-c.zip</field>
+        <field name="Description">USB 2.0-only 16P Type-C Receptacle connector</field>
+      </fields>
+      <pins>
+        <pin num="A1" name="GND" type="passive"/>
+        <pin num="A4" name="VBUS" type="passive"/>
+        <pin num="A5" name="CC1" type="bidirectional"/>
+        <pin num="A6" name="D+" type="bidirectional"/>
+        <pin num="A7" name="D-" type="bidirectional"/>
+        <pin num="A8" name="SBU1" type="bidirectional"/>
+        <pin num="A9" name="VBUS" type="passive"/>
+        <pin num="A12" name="GND" type="passive"/>
+        <pin num="B1" name="GND" type="passive"/>
+        <pin num="B4" name="VBUS" type="passive"/>
+        <pin num="B5" name="CC2" type="bidirectional"/>
+        <pin num="B6" name="D+" type="bidirectional"/>
+        <pin num="B7" name="D-" type="bidirectional"/>
+        <pin num="B8" name="SBU2" type="bidirectional"/>
+        <pin num="B9" name="VBUS" type="passive"/>
+        <pin num="B12" name="GND" type="passive"/>
+        <pin num="SH" name="SHIELD" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x03">
+      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x04">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x06">
+      <description>Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x06</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x07">
+      <description>Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x07</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x15">
+      <description>Generic connector, single row, 01x15, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x15</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x15, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+        <pin num="11" name="Pin_11" type="passive"/>
+        <pin num="12" name="Pin_12" type="passive"/>
+        <pin num="13" name="Pin_13" type="passive"/>
+        <pin num="14" name="Pin_14" type="passive"/>
+        <pin num="15" name="Pin_15" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_Schottky">
+      <description>Schottky diode</description>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Schottky</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Schottky diode</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="L">
+      <description>Inductor</description>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Inductor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Light emitting diode</field>
+        <field name="Sim.Pins">1=K 2=A</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Polyfuse">
+      <description>Resettable fuse, polymeric positive temperature coefficient</description>
+      <footprints>
+        <fp>*polyfuse*</fp>
+        <fp>*PTC*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">Polyfuse</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resettable fuse, polymeric positive temperature coefficient</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Interface_USB" part="CH340C">
+      <description>USB serial converter, crystal-less, UART, SOIC-16</description>
+      <docs>https://datasheet.lcsc.com/szlcsc/Jiangsu-Qin-Heng-CH340C_C84681.pdf</docs>
+      <footprints>
+        <fp>SOIC*3.9x9.9mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">CH340C</field>
+        <field name="Footprint">Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</field>
+        <field name="Datasheet">https://datasheet.lcsc.com/szlcsc/Jiangsu-Qin-Heng-CH340C_C84681.pdf</field>
+        <field name="Description">USB serial converter, crystal-less, UART, SOIC-16</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="TXD" type="output"/>
+        <pin num="3" name="RXD" type="input"/>
+        <pin num="4" name="V3" type="passive"/>
+        <pin num="5" name="UD+" type="bidirectional"/>
+        <pin num="6" name="UD-" type="bidirectional"/>
+        <pin num="7" name="NC" type="no_connect"/>
+        <pin num="8" name="NC" type="no_connect"/>
+        <pin num="9" name="~{CTS}" type="input"/>
+        <pin num="10" name="~{DSR}" type="input"/>
+        <pin num="11" name="~{RI}" type="input"/>
+        <pin num="12" name="~{DCD}" type="input"/>
+        <pin num="13" name="~{DTR}" type="output"/>
+        <pin num="14" name="~{RTS}" type="output"/>
+        <pin num="15" name="R232" type="input"/>
+        <pin num="16" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Power_Protection" part="USBLC6-2SC6">
+      <description>Very low capacitance ESD protection diode, 2 data-line, SOT-23-6</description>
+      <docs>https://www.st.com/resource/en/datasheet/usblc6-2.pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">USBLC6-2SC6</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
+        <field name="Datasheet">https://www.st.com/resource/en/datasheet/usblc6-2.pdf</field>
+        <field name="Description">Very low capacitance ESD protection diode, 2 data-line, SOT-23-6</field>
+      </fields>
+      <pins>
+        <pin num="1" name="I/O1" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+        <pin num="3" name="I/O2" type="passive"/>
+        <pin num="4" name="I/O2" type="passive"/>
+        <pin num="5" name="VBUS" type="passive"/>
+        <pin num="6" name="I/O1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RF_Module" part="ESP32-WROOM-32">
+      <description>RF Module, ESP32-D0WDQ6 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 2.7-3.6V, onboard antenna, SMD</description>
+      <docs>https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf</docs>
+      <footprints>
+        <fp>ESP32?WROOM?32*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ESP32-WROOM-32</field>
+        <field name="Footprint">RF_Module:ESP32-WROOM-32</field>
+        <field name="Datasheet">https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf</field>
+        <field name="Description">RF Module, ESP32-D0WDQ6 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 2.7-3.6V, onboard antenna, SMD</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="VDD" type="power_in"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="4" name="SENSOR_VP" type="input"/>
+        <pin num="5" name="SENSOR_VN" type="input"/>
+        <pin num="6" name="IO34" type="input"/>
+        <pin num="7" name="IO35" type="input"/>
+        <pin num="8" name="IO32" type="bidirectional"/>
+        <pin num="9" name="IO33" type="bidirectional"/>
+        <pin num="10" name="IO25" type="bidirectional"/>
+        <pin num="11" name="IO26" type="bidirectional"/>
+        <pin num="12" name="IO27" type="bidirectional"/>
+        <pin num="13" name="IO14" type="bidirectional"/>
+        <pin num="14" name="IO12" type="bidirectional"/>
+        <pin num="15" name="GND" type="passive"/>
+        <pin num="16" name="IO13" type="bidirectional"/>
+        <pin num="17" name="SHD/SD2" type="bidirectional"/>
+        <pin num="18" name="SWP/SD3" type="bidirectional"/>
+        <pin num="19" name="SCS/CMD" type="bidirectional"/>
+        <pin num="20" name="SCK/CLK" type="bidirectional"/>
+        <pin num="21" name="SDO/SD0" type="bidirectional"/>
+        <pin num="22" name="SDI/SD1" type="bidirectional"/>
+        <pin num="23" name="IO15" type="bidirectional"/>
+        <pin num="24" name="IO2" type="bidirectional"/>
+        <pin num="25" name="IO0" type="bidirectional"/>
+        <pin num="26" name="IO4" type="bidirectional"/>
+        <pin num="27" name="IO16" type="bidirectional"/>
+        <pin num="28" name="IO17" type="bidirectional"/>
+        <pin num="29" name="IO5" type="bidirectional"/>
+        <pin num="30" name="IO18" type="bidirectional"/>
+        <pin num="31" name="IO19" type="bidirectional"/>
+        <pin num="32" name="NC" type="no_connect"/>
+        <pin num="33" name="IO21" type="bidirectional"/>
+        <pin num="34" name="RXD0/IO3" type="bidirectional"/>
+        <pin num="35" name="TXD0/IO1" type="bidirectional"/>
+        <pin num="36" name="IO22" type="bidirectional"/>
+        <pin num="37" name="IO23" type="bidirectional"/>
+        <pin num="38" name="GND" type="passive"/>
+        <pin num="39" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_Push">
+      <description>Push button switch, generic, two pins</description>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_Push</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Push button switch, generic, two pins</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_BJT" part="Q_NPN_BEC">
+      <description>NPN transistor, base/emitter/collector</description>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">Q_NPN_BEC</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">NPN transistor, base/emitter/collector</field>
+        <field name="Sim.Device">NPN</field>
+        <field name="Sim.Pins">1=B 2=E 3=C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="E" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_FET" part="AO3401A">
+      <description>-4.0A Id, -30V Vds, P-Channel MOSFET, SOT-23</description>
+      <docs>http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">AO3401A</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet">http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf</field>
+        <field name="Description">-4.0A Id, -30V Vds, P-Channel MOSFET, SOT-23</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="walkiepcb" part="Ra-01SH">
+      <description>SX1262 803-930 MHz LoRa/GFSK module with I-PEX antenna connector</description>
+      <docs>https://docs.ai-thinker.com/_media/ra-01sh_specification.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Ra-01SH</field>
+        <field name="Footprint">walkiepcb:Ai-Thinker_Ra-01SH</field>
+        <field name="Datasheet">https://docs.ai-thinker.com/_media/ra-01sh_specification.pdf</field>
+        <field name="Description">SX1262 803-930 MHz LoRa/GFSK module with I-PEX antenna connector</field>
+      </fields>
+      <pins>
+        <pin num="1" name="ANT" type="passive"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="3V3" type="power_in"/>
+        <pin num="4" name="RESET" type="input"/>
+        <pin num="5" name="TXEN" type="bidirectional"/>
+        <pin num="6" name="DIO1" type="bidirectional"/>
+        <pin num="7" name="DIO2" type="bidirectional"/>
+        <pin num="8" name="DIO3" type="bidirectional"/>
+        <pin num="9" name="GND" type="power_in"/>
+        <pin num="10" name="BUSY" type="output"/>
+        <pin num="11" name="RXEN" type="bidirectional"/>
+        <pin num="12" name="SCK" type="input"/>
+        <pin num="13" name="MISO" type="output"/>
+        <pin num="14" name="MOSI" type="input"/>
+        <pin num="15" name="NSS" type="input"/>
+        <pin num="16" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Audio">
+      <uri>${KICAD10_SYMBOL_DIR}/Audio.kicad_sym</uri>
+    </library>
+    <library logical="Battery_Management">
+      <uri>${KICAD10_SYMBOL_DIR}/Battery_Management.kicad_sym</uri>
+    </library>
+    <library logical="Connector">
+      <uri>${KICAD10_SYMBOL_DIR}/Connector.kicad_sym</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>${KICAD10_SYMBOL_DIR}/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>${KICAD10_SYMBOL_DIR}/Device.kicad_sym</uri>
+    </library>
+    <library logical="Interface_USB">
+      <uri>${KICAD10_SYMBOL_DIR}/Interface_USB.kicad_sym</uri>
+    </library>
+    <library logical="Power_Protection">
+      <uri>${KICAD10_SYMBOL_DIR}/Power_Protection.kicad_sym</uri>
+    </library>
+    <library logical="RF_Module">
+      <uri>${KICAD10_SYMBOL_DIR}/RF_Module.kicad_sym</uri>
+    </library>
+    <library logical="Switch">
+      <uri>${KICAD10_SYMBOL_DIR}/Switch.kicad_sym</uri>
+    </library>
+    <library logical="Transistor_BJT">
+      <uri>${KICAD10_SYMBOL_DIR}/Transistor_BJT.kicad_sym</uri>
+    </library>
+    <library logical="Transistor_FET">
+      <uri>${KICAD10_SYMBOL_DIR}/Transistor_FET.kicad_sym</uri>
+    </library>
+    <library logical="walkiepcb">
+      <uri>${KIPRJMOD}/walkiepcb.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/3V3" class="Default">
+      <node ref="C10" pin="1" pintype="passive"/>
+      <node ref="C11" pin="1" pintype="passive"/>
+      <node ref="C12" pin="1" pintype="passive"/>
+      <node ref="C13" pin="1" pintype="passive"/>
+      <node ref="C15" pin="1" pintype="passive"/>
+      <node ref="C19" pin="1" pintype="passive"/>
+      <node ref="C27" pin="1" pintype="passive"/>
+      <node ref="C28" pin="1" pintype="passive"/>
+      <node ref="C29" pin="1" pintype="passive"/>
+      <node ref="C30" pin="1" pintype="passive"/>
+      <node ref="J5" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J7" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="MK1" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="R15" pin="1" pintype="passive"/>
+      <node ref="R16" pin="1" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="TP1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U2" pin="16" pinfunction="VCC_16" pintype="power_in"/>
+      <node ref="U2" pin="4" pinfunction="V3_4" pintype="passive"/>
+      <node ref="U5" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="U5" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="U5" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="U6" pin="2" pinfunction="VDD_2" pintype="power_in"/>
+      <node ref="U8" pin="3" pinfunction="3V3_3" pintype="power_in"/>
+    </net>
+    <net code="2" name="/AMP_DATA" class="Default">
+      <node ref="U6" pin="36" pinfunction="IO22_36" pintype="bidirectional"/>
+      <node ref="U7" pin="1" pinfunction="DIN_1" pintype="input"/>
+    </net>
+    <net code="3" name="/AMP_ENABLE" class="Default">
+      <node ref="R20" pin="1" pintype="passive"/>
+      <node ref="U6" pin="23" pinfunction="IO15_23" pintype="bidirectional"/>
+    </net>
+    <net code="4" name="/AMP_SD" class="Default">
+      <node ref="R19" pin="1" pintype="passive"/>
+      <node ref="R20" pin="2" pintype="passive"/>
+      <node ref="U7" pin="4" pinfunction="~{SD_MODE}_4" pintype="input"/>
+    </net>
+    <net code="5" name="/BAT_CELL" class="Default">
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="Q4" pin="3" pinfunction="D_3" pintype="passive"/>
+      <node ref="R13" pin="1" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="U3" pin="5" pinfunction="BAT_5" pintype="power_out"/>
+    </net>
+    <net code="6" name="/BAT_SENSE" class="Default">
+      <node ref="C14" pin="1" pintype="passive"/>
+      <node ref="R13" pin="2" pintype="passive"/>
+      <node ref="R14" pin="1" pintype="passive"/>
+      <node ref="U6" pin="6" pinfunction="IO34_6" pintype="input"/>
+    </net>
+    <net code="7" name="/BB_SW1" class="Default">
+      <node ref="L1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U5" pin="8" pinfunction="Pin_8_8" pintype="passive"/>
+      <node ref="U5" pin="9" pinfunction="Pin_9_9" pintype="passive"/>
+    </net>
+    <net code="8" name="/BB_SW2" class="Default">
+      <node ref="L1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U5" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+      <node ref="U5" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
+    </net>
+    <net code="9" name="/BMS_CS" class="Default">
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="U4" pin="2" pinfunction="CS_2" pintype="input"/>
+    </net>
+    <net code="10" name="/BMS_OC" class="Default">
+      <node ref="Q3" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="U4" pin="3" pinfunction="OC_3" pintype="output"/>
+    </net>
+    <net code="11" name="/BMS_OD" class="Default">
+      <node ref="Q3" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+      <node ref="U4" pin="1" pinfunction="OD_1" pintype="output"/>
+    </net>
+    <net code="12" name="/BMS_VCC" class="Default">
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="U4" pin="5" pinfunction="VCC_5" pintype="power_in"/>
+    </net>
+    <net code="13" name="/BTN1" class="Default">
+      <node ref="SW1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U6" pin="26" pinfunction="IO4_26" pintype="bidirectional"/>
+    </net>
+    <net code="14" name="/BTN2" class="Default">
+      <node ref="SW2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U6" pin="16" pinfunction="IO13_16" pintype="bidirectional"/>
+    </net>
+    <net code="15" name="/BTN3" class="Default">
+      <node ref="SW3" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U6" pin="27" pinfunction="IO16_27" pintype="bidirectional"/>
+    </net>
+    <net code="16" name="/BTN4" class="Default">
+      <node ref="SW4" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U6" pin="12" pinfunction="IO27_12" pintype="bidirectional"/>
+    </net>
+    <net code="17" name="/BTN5" class="Default">
+      <node ref="SW5" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U6" pin="8" pinfunction="IO32_8" pintype="bidirectional"/>
+    </net>
+    <net code="18" name="/CC1" class="Default">
+      <node ref="J1" pin="A5" pinfunction="CC1_A5" pintype="bidirectional"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+    </net>
+    <net code="19" name="/CC2" class="Default">
+      <node ref="J1" pin="B5" pinfunction="CC2_B5" pintype="bidirectional"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+    </net>
+    <net code="20" name="/CELL_NEG" class="Default">
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="J2" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="Q3" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="U4" pin="6" pinfunction="GND_6" pintype="power_in"/>
+    </net>
+    <net code="21" name="/CHG_LED_A" class="Default">
+      <node ref="D3" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="R25" pin="2" pintype="passive"/>
+    </net>
+    <net code="22" name="/CHG_N" class="Default">
+      <node ref="D3" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="U3" pin="7" pinfunction="~{CHRG}_7" pintype="open_collector"/>
+    </net>
+    <net code="23" name="/CHG_PROG" class="Default">
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="U3" pin="2" pinfunction="PROG_2" pintype="passive"/>
+    </net>
+    <net code="24" name="/DTR_N" class="Default">
+      <node ref="Q2" pin="2" pinfunction="E_2" pintype="passive"/>
+      <node ref="R22" pin="1" pintype="passive"/>
+      <node ref="U2" pin="13" pinfunction="~{DTR}_13" pintype="output"/>
+    </net>
+    <net code="25" name="/EN" class="Default">
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="Q1" pin="3" pinfunction="C_3" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="TP5" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U6" pin="3" pinfunction="EN_3" pintype="input"/>
+    </net>
+    <net code="26" name="/GND" class="Default">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C10" pin="2" pintype="passive"/>
+      <node ref="C11" pin="2" pintype="passive"/>
+      <node ref="C12" pin="2" pintype="passive"/>
+      <node ref="C13" pin="2" pintype="passive"/>
+      <node ref="C14" pin="2" pintype="passive"/>
+      <node ref="C15" pin="2" pintype="passive"/>
+      <node ref="C16" pin="2" pintype="passive"/>
+      <node ref="C17" pin="2" pintype="passive"/>
+      <node ref="C18" pin="2" pintype="passive"/>
+      <node ref="C19" pin="2" pintype="passive"/>
+      <node ref="C20" pin="2" pintype="passive"/>
+      <node ref="C26" pin="2" pintype="passive"/>
+      <node ref="C27" pin="2" pintype="passive"/>
+      <node ref="C28" pin="2" pintype="passive"/>
+      <node ref="C29" pin="2" pintype="passive"/>
+      <node ref="C30" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="C9" pin="2" pintype="passive"/>
+      <node ref="D2" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="J1" pin="A1" pinfunction="GND_A1" pintype="passive"/>
+      <node ref="J1" pin="A12" pinfunction="GND_A12" pintype="passive"/>
+      <node ref="J1" pin="B1" pinfunction="GND_B1" pintype="passive"/>
+      <node ref="J1" pin="B12" pinfunction="GND_B12" pintype="passive"/>
+      <node ref="J1" pin="SH" pinfunction="SHIELD_SH" pintype="passive"/>
+      <node ref="J5" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="J6" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="J7" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="MK1" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="MK1" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="MK1" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="Q3" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="R14" pin="2" pintype="passive"/>
+      <node ref="R19" pin="2" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="R26" pin="2" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+      <node ref="SW1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="SW2" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="SW3" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="SW4" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="SW5" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="TP2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="GND_2" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="GND_1" pintype="power_in"/>
+      <node ref="U2" pin="15" pinfunction="R232_15" pintype="input"/>
+      <node ref="U3" pin="1" pinfunction="TEMP_1" pintype="input"/>
+      <node ref="U3" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="U3" pin="9" pinfunction="EPAD_9" pintype="passive"/>
+      <node ref="U5" pin="13" pinfunction="Pin_13_13" pintype="passive"/>
+      <node ref="U5" pin="15" pinfunction="Pin_15_15" pintype="passive"/>
+      <node ref="U5" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="U6" pin="1" pinfunction="GND_1" pintype="power_in"/>
+      <node ref="U6" pin="15" pinfunction="GND_15" pintype="passive"/>
+      <node ref="U6" pin="38" pinfunction="GND_38" pintype="passive"/>
+      <node ref="U6" pin="39" pinfunction="GND_39" pintype="passive"/>
+      <node ref="U7" pin="11" pinfunction="GND_11" pintype="passive"/>
+      <node ref="U7" pin="15" pinfunction="GND_15" pintype="passive"/>
+      <node ref="U7" pin="17" pinfunction="PAD_17" pintype="unspecified"/>
+      <node ref="U7" pin="2" pinfunction="GAIN_SLOT_2" pintype="passive"/>
+      <node ref="U7" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="U8" pin="16" pinfunction="GND_16" pintype="power_in"/>
+      <node ref="U8" pin="2" pinfunction="GND_2" pintype="power_in"/>
+      <node ref="U8" pin="9" pinfunction="GND_9" pintype="power_in"/>
+    </net>
+    <net code="27" name="/GPIO0" class="Default">
+      <node ref="Q2" pin="3" pinfunction="C_3" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="TP6" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U6" pin="25" pinfunction="IO0_25" pintype="bidirectional"/>
+    </net>
+    <net code="28" name="/GPIO12" class="Default">
+      <node ref="TP8" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U6" pin="14" pinfunction="IO12_14" pintype="bidirectional"/>
+    </net>
+    <net code="29" name="/I2S_BCLK" class="Default">
+      <node ref="MK1" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+      <node ref="U6" pin="11" pinfunction="IO26_11" pintype="bidirectional"/>
+      <node ref="U7" pin="16" pinfunction="BCLK_16" pintype="input"/>
+    </net>
+    <net code="30" name="/I2S_WS" class="Default">
+      <node ref="MK1" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="U6" pin="10" pinfunction="IO25_10" pintype="bidirectional"/>
+      <node ref="U7" pin="14" pinfunction="LRCLK_14" pintype="input"/>
+    </net>
+    <net code="31" name="/LED+" class="Default">
+      <node ref="J6" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R21" pin="2" pintype="passive"/>
+    </net>
+    <net code="32" name="/LED_STATUS" class="Default">
+      <node ref="R21" pin="1" pintype="passive"/>
+      <node ref="R24" pin="1" pintype="passive"/>
+      <node ref="TP7" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U6" pin="24" pinfunction="IO2_24" pintype="bidirectional"/>
+    </net>
+    <net code="33" name="/MIC_DATA" class="Default">
+      <node ref="MK1" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
+      <node ref="R26" pin="1" pintype="passive"/>
+      <node ref="U6" pin="9" pinfunction="IO33_9" pintype="bidirectional"/>
+    </net>
+    <net code="34" name="/OLED_SCL" class="Default">
+      <node ref="J7" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="R16" pin="2" pintype="passive"/>
+      <node ref="U6" pin="13" pinfunction="IO14_13" pintype="bidirectional"/>
+    </net>
+    <net code="35" name="/OLED_SDA" class="Default">
+      <node ref="J7" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="R15" pin="2" pintype="passive"/>
+      <node ref="U6" pin="33" pinfunction="IO21_33" pintype="bidirectional"/>
+    </net>
+    <net code="36" name="/POT_ADC" class="Default">
+      <node ref="C26" pin="1" pintype="passive"/>
+      <node ref="J5" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="U6" pin="7" pinfunction="IO35_7" pintype="input"/>
+    </net>
+    <net code="37" name="/PROT_MID" class="Default">
+      <node ref="Q3" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="Q3" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+    </net>
+    <net code="38" name="/Q1_BASE" class="Default">
+      <node ref="Q1" pin="1" pinfunction="B_1" pintype="input"/>
+      <node ref="R22" pin="2" pintype="passive"/>
+    </net>
+    <net code="39" name="/Q2_BASE" class="Default">
+      <node ref="Q2" pin="1" pinfunction="B_1" pintype="input"/>
+      <node ref="R23" pin="2" pintype="passive"/>
+    </net>
+    <net code="40" name="/RADIO_BUSY" class="Default">
+      <node ref="U6" pin="4" pinfunction="SENSOR_VP_4" pintype="input"/>
+      <node ref="U8" pin="10" pinfunction="BUSY_10" pintype="output"/>
+    </net>
+    <net code="41" name="/RADIO_DIO1" class="Default">
+      <node ref="U6" pin="5" pinfunction="SENSOR_VN_5" pintype="input"/>
+      <node ref="U8" pin="6" pinfunction="DIO1_6" pintype="bidirectional"/>
+    </net>
+    <net code="42" name="/RADIO_MISO" class="Default">
+      <node ref="U6" pin="31" pinfunction="IO19_31" pintype="bidirectional"/>
+      <node ref="U8" pin="13" pinfunction="MISO_13" pintype="output"/>
+    </net>
+    <net code="43" name="/RADIO_MOSI" class="Default">
+      <node ref="U6" pin="37" pinfunction="IO23_37" pintype="bidirectional"/>
+      <node ref="U8" pin="14" pinfunction="MOSI_14" pintype="input"/>
+    </net>
+    <net code="44" name="/RADIO_NSS" class="Default">
+      <node ref="U6" pin="29" pinfunction="IO5_29" pintype="bidirectional"/>
+      <node ref="U8" pin="15" pinfunction="NSS_15" pintype="input"/>
+    </net>
+    <net code="45" name="/RADIO_RST" class="Default">
+      <node ref="U6" pin="28" pinfunction="IO17_28" pintype="bidirectional"/>
+      <node ref="U8" pin="4" pinfunction="RESET_4" pintype="input"/>
+    </net>
+    <net code="46" name="/RADIO_SCK" class="Default">
+      <node ref="U6" pin="30" pinfunction="IO18_30" pintype="bidirectional"/>
+      <node ref="U8" pin="12" pinfunction="SCK_12" pintype="input"/>
+    </net>
+    <net code="47" name="/RTS_N" class="Default">
+      <node ref="Q1" pin="2" pinfunction="E_2" pintype="passive"/>
+      <node ref="R23" pin="1" pintype="passive"/>
+      <node ref="U2" pin="14" pinfunction="~{RTS}_14" pintype="output"/>
+    </net>
+    <net code="48" name="/SPK+" class="Default">
+      <node ref="J4" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="U7" pin="9" pinfunction="OUTP_9" pintype="output"/>
+    </net>
+    <net code="49" name="/SPK-" class="Default">
+      <node ref="J4" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="U7" pin="10" pinfunction="OUTN_10" pintype="output"/>
+    </net>
+    <net code="50" name="/STATUS_LED_A" class="Default">
+      <node ref="D2" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="R24" pin="2" pintype="passive"/>
+    </net>
+    <net code="51" name="/SYS_FUSED" class="Default">
+      <node ref="F1" pin="2" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+    </net>
+    <net code="52" name="/SYS_RAW" class="Default">
+      <node ref="D1" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="F1" pin="1" pintype="passive"/>
+      <node ref="Q4" pin="2" pinfunction="S_2" pintype="passive"/>
+    </net>
+    <net code="53" name="/SYS_SW" class="Default">
+      <node ref="C16" pin="1" pintype="passive"/>
+      <node ref="C17" pin="1" pintype="passive"/>
+      <node ref="C18" pin="1" pintype="passive"/>
+      <node ref="C20" pin="1" pintype="passive"/>
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="C9" pin="1" pintype="passive"/>
+      <node ref="J3" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="U5" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="U5" pin="10" pinfunction="Pin_10_10" pintype="passive"/>
+      <node ref="U5" pin="11" pinfunction="Pin_11_11" pintype="passive"/>
+      <node ref="U5" pin="12" pinfunction="Pin_12_12" pintype="passive"/>
+      <node ref="U7" pin="7" pinfunction="VDD_7" pintype="power_in"/>
+      <node ref="U7" pin="8" pinfunction="VDD_8" pintype="passive"/>
+    </net>
+    <net code="54" name="/UART_RX" class="Default">
+      <node ref="TP4" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="TXD_2" pintype="output"/>
+      <node ref="U6" pin="34" pinfunction="RXD0/IO3_34" pintype="bidirectional"/>
+    </net>
+    <net code="55" name="/UART_TX" class="Default">
+      <node ref="TP3" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="RXD_3" pintype="input"/>
+      <node ref="U6" pin="35" pinfunction="TXD0/IO1_35" pintype="bidirectional"/>
+    </net>
+    <net code="56" name="/USB_5V" class="Default">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="D1" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="J1" pin="A4" pinfunction="VBUS_A4" pintype="passive"/>
+      <node ref="J1" pin="A9" pinfunction="VBUS_A9" pintype="passive"/>
+      <node ref="J1" pin="B4" pinfunction="VBUS_B4" pintype="passive"/>
+      <node ref="J1" pin="B9" pinfunction="VBUS_B9" pintype="passive"/>
+      <node ref="Q4" pin="1" pinfunction="G_1" pintype="input"/>
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="R25" pin="1" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="VBUS_5" pintype="passive"/>
+      <node ref="U3" pin="4" pinfunction="V_{CC}_4" pintype="power_in"/>
+      <node ref="U3" pin="8" pinfunction="CE_8" pintype="input"/>
+    </net>
+    <net code="57" name="/USB_DM" class="Default">
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="U2" pin="6" pinfunction="UD-_6" pintype="bidirectional"/>
+    </net>
+    <net code="58" name="/USB_DM_CONN" class="Default">
+      <node ref="J1" pin="A7" pinfunction="D-_A7" pintype="bidirectional"/>
+      <node ref="J1" pin="B7" pinfunction="D-_B7" pintype="bidirectional"/>
+      <node ref="U1" pin="3" pinfunction="I/O2_3" pintype="passive"/>
+    </net>
+    <net code="59" name="/USB_DM_ESD" class="Default">
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="I/O2_4" pintype="passive"/>
+    </net>
+    <net code="60" name="/USB_DP" class="Default">
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="UD+_5" pintype="bidirectional"/>
+    </net>
+    <net code="61" name="/USB_DP_CONN" class="Default">
+      <node ref="J1" pin="A6" pinfunction="D+_A6" pintype="bidirectional"/>
+      <node ref="J1" pin="B6" pinfunction="D+_B6" pintype="bidirectional"/>
+      <node ref="U1" pin="1" pinfunction="I/O1_1" pintype="passive"/>
+    </net>
+    <net code="62" name="/USB_DP_ESD" class="Default">
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="I/O1_6" pintype="passive"/>
+    </net>
+    <net code="63" name="unconnected-(J1-SBU1-PadA8)" class="Default">
+      <node ref="J1" pin="A8" pinfunction="SBU1_A8" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="64" name="unconnected-(J1-SBU2-PadB8)" class="Default">
+      <node ref="J1" pin="B8" pinfunction="SBU2_B8" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="65" name="unconnected-(U2-NC-Pad7)" class="Default">
+      <node ref="U2" pin="7" pinfunction="NC_7" pintype="no_connect"/>
+    </net>
+    <net code="66" name="unconnected-(U2-NC-Pad8)" class="Default">
+      <node ref="U2" pin="8" pinfunction="NC_8" pintype="no_connect"/>
+    </net>
+    <net code="67" name="unconnected-(U2-~{CTS}-Pad9)" class="Default">
+      <node ref="U2" pin="9" pinfunction="~{CTS}_9" pintype="input+no_connect"/>
+    </net>
+    <net code="68" name="unconnected-(U2-~{DCD}-Pad12)" class="Default">
+      <node ref="U2" pin="12" pinfunction="~{DCD}_12" pintype="input+no_connect"/>
+    </net>
+    <net code="69" name="unconnected-(U2-~{DSR}-Pad10)" class="Default">
+      <node ref="U2" pin="10" pinfunction="~{DSR}_10" pintype="input+no_connect"/>
+    </net>
+    <net code="70" name="unconnected-(U2-~{RI}-Pad11)" class="Default">
+      <node ref="U2" pin="11" pinfunction="~{RI}_11" pintype="input+no_connect"/>
+    </net>
+    <net code="71" name="unconnected-(U3-~{STDBY}-Pad6)" class="Default">
+      <node ref="U3" pin="6" pinfunction="~{STDBY}_6" pintype="open_collector+no_connect"/>
+    </net>
+    <net code="72" name="unconnected-(U4-TD-Pad4)" class="Default">
+      <node ref="U4" pin="4" pinfunction="TD_4" pintype="no_connect"/>
+    </net>
+    <net code="73" name="unconnected-(U5-Pin_14-Pad14)" class="Default">
+      <node ref="U5" pin="14" pinfunction="Pin_14_14" pintype="passive+no_connect"/>
+    </net>
+    <net code="74" name="unconnected-(U6-NC-Pad32)" class="Default">
+      <node ref="U6" pin="32" pinfunction="NC_32" pintype="no_connect"/>
+    </net>
+    <net code="75" name="unconnected-(U6-SCK/CLK-Pad20)" class="Default">
+      <node ref="U6" pin="20" pinfunction="SCK/CLK_20" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="76" name="unconnected-(U6-SCS/CMD-Pad19)" class="Default">
+      <node ref="U6" pin="19" pinfunction="SCS/CMD_19" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="77" name="unconnected-(U6-SDI/SD1-Pad22)" class="Default">
+      <node ref="U6" pin="22" pinfunction="SDI/SD1_22" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="78" name="unconnected-(U6-SDO/SD0-Pad21)" class="Default">
+      <node ref="U6" pin="21" pinfunction="SDO/SD0_21" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="79" name="unconnected-(U6-SHD/SD2-Pad17)" class="Default">
+      <node ref="U6" pin="17" pinfunction="SHD/SD2_17" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="80" name="unconnected-(U6-SWP/SD3-Pad18)" class="Default">
+      <node ref="U6" pin="18" pinfunction="SWP/SD3_18" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="81" name="unconnected-(U7-NC-Pad5)" class="Default">
+      <node ref="U7" pin="5" pinfunction="NC_5" pintype="no_connect"/>
+    </net>
+    <net code="82" name="unconnected-(U7-NC-Pad6)" class="Default">
+      <node ref="U7" pin="6" pinfunction="NC_6" pintype="no_connect"/>
+    </net>
+    <net code="83" name="unconnected-(U7-NC-Pad12)" class="Default">
+      <node ref="U7" pin="12" pinfunction="NC_12" pintype="no_connect"/>
+    </net>
+    <net code="84" name="unconnected-(U7-NC-Pad13)" class="Default">
+      <node ref="U7" pin="13" pinfunction="NC_13" pintype="no_connect"/>
+    </net>
+    <net code="85" name="unconnected-(U8-ANT-Pad1)" class="Default">
+      <node ref="U8" pin="1" pinfunction="ANT_1" pintype="passive+no_connect"/>
+    </net>
+    <net code="86" name="unconnected-(U8-DIO2-Pad7)" class="Default">
+      <node ref="U8" pin="7" pinfunction="DIO2_7" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="87" name="unconnected-(U8-DIO3-Pad8)" class="Default">
+      <node ref="U8" pin="8" pinfunction="DIO3_8" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="88" name="unconnected-(U8-RXEN-Pad11)" class="Default">
+      <node ref="U8" pin="11" pinfunction="RXEN_11" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="89" name="unconnected-(U8-TXEN-Pad5)" class="Default">
+      <node ref="U8" pin="5" pinfunction="TXEN_5" pintype="bidirectional+no_connect"/>
+    </net>
+  </nets>
+</export>

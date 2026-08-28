@@ -1,0 +1,17 @@
+# KiCad editor state and backup files
+*.kicad_prl
+*.lck
+~*.lck
+*-backups/
+
+# Firmware build products
+.pio/
+.vscode/
+build/
+
+# Script and operating-system clutter
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+

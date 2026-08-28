@@ -1,0 +1,13 @@
+Final Draft independent validation — 2026-08-27
+
+PASS board outline 45.000 x 100.000 mm; 2 copper layers
+PASS critical CH340, microphone, ESP32, amplifier, battery-ADC, and radio pad nets
+PASS OLED holes left-to-right SDA, SCL, 3V3, GND
+PASS four 3.2 mm NPTH M3 holes at the verified corner coordinates
+PASS KiCad U6 position/orientation and left-edge antenna placement
+PASS BOM/CPL exact parity at 64 installed references
+PASS corrected JLC CPL U6 = (16.000000, 49.500000), Top, 180 degrees
+PASS Gerber ZIP has the exact 9 plot layers, Gerber job, plus PTH and NPTH drill files
+PASS exported ERC report = 0 errors / 0 warnings
+PASS exported DRC report = 0 violations / 0 unconnected pads
+PASS self-contained project-local Ra-01SH 3D review model
