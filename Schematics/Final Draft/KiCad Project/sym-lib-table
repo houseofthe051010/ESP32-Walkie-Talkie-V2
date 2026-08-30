@@ -1,4 +1,0 @@
-(sym_lib_table
-  (version 7)
-  (lib (name "walkiepcb")(type "KiCad")(uri "${KIPRJMOD}/walkiepcb.kicad_sym")(options "")(descr "Walkie-talkie custom symbols"))
-)

@@ -15,3 +15,22 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
+# Local design history and generated reference media
+docs/
+Schematics/Legacy/
+
+# Locally generated/redundant KiCad release snapshots
+Schematics/Final Draft/
+
+# Keep the active KiCad source, libraries, 3D models, audit plots, and BOMs;
+# exclude prose notes and generated validation reports from Git.
+Schematics/KiCad Project/*.md
+Schematics/KiCad Project/*.rpt
+Schematics/KiCad Project/walkiepcb_final_audit.pdf
+Schematics/KiCad Project/walkiepcb_final_audit.xml
+
+# Keep fabrication outputs, BOM, and CPL; exclude notes/reports and stale renders.
+Schematics/Gerber, BOM, CPL files for JLBPCB/*.md
+Schematics/Gerber, BOM, CPL files for JLBPCB/*.txt
+Schematics/Gerber, BOM, CPL files for JLBPCB/*.rpt
+Schematics/Gerber, BOM, CPL files for JLBPCB/*.png

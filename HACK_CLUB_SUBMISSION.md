@@ -9,7 +9,7 @@ The public Blueprint landing page currently says that its program ended on **Mar
 - [x] Root README with description, motivation, intended use and build overview
 - [x] PCB screenshots and a PCB 3D render
 - [x] BOM table at the end of the README
-- [x] Root `BOM.csv` with estimates, sources and part notes
+- [x] Root `bom.csv` with estimates, sources and part notes
 - [x] Editable KiCad schematic and PCB sources
 - [x] Gerber ZIP, JLC BOM and corrected CPL
 - [x] PCB STEP export

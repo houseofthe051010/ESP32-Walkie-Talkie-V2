@@ -1,2 +1,8 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Fusion assembly archives and any future assembly STEP exports exceed or may
+# exceed GitHub's normal 100 MB object limit.
+CAD/Assembly/*.f3z filter=lfs diff=lfs merge=lfs -text
+CAD/Assembly/*.step filter=lfs diff=lfs merge=lfs -text
+CAD/Assembly/*.stp filter=lfs diff=lfs merge=lfs -text

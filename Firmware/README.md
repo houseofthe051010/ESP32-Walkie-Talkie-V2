@@ -13,5 +13,4 @@ The planned firmware needs to provide:
 7. I2S speaker playback through MAX98357A with controlled amplifier enable.
 8. Low-battery warnings and graceful shutdown behavior.
 
-The pin map is documented in [`PIN_ASSIGNMENTS.md`](<../Schematics/Final Draft/KiCad Project/PIN_ASSIGNMENTS.md>). Firmware must be added and tested before this project is represented as a completed Hack Club shipment.
-
+The authoritative electrical pin mapping is the editable [KiCad schematic](<../Schematics/KiCad Project/walkiepcb.kicad_sch>). Firmware must be added and tested before this project is represented as a completed Hack Club shipment.

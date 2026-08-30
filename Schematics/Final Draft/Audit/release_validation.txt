@@ -1,9 +1,0 @@
-Walkie-talkie Final Draft release validation
-Date: 2026-08-27
-Board: 45.0 mm x 100.0 mm, 2 copper layers
-ERC: 0 errors, 0 warnings
-DRC: 0 violations, 0 unconnected pads
-Installed references in BOM/CPL: 64
-ESP32 U6 corrected JLC CPL: X=16.000000 mm, Y=49.500000 mm, rotation=180 degrees
-Expected JLC preview: ESP32 PCB antenna faces the LEFT board edge.
-Expected JLC preview: Ra-01SH occupies the TOP footprint and its I-PEX connector is on the board-interior/lower side of the module.

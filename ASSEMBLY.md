@@ -6,7 +6,7 @@ This document covers the off-board parts that are not installed by JLCPCB. It do
 
 1. Order only the matched Final Draft Gerber, BOM and corrected CPL set.
 2. Verify all component rotations in the JLC preview, especially the ESP32 antenna direction.
-3. Bring up one bare PCBA with a current-limited bench supply using the [first-power-up checklist](<Schematics/Final Draft/KiCad Project/FIRST_POWER_UP_CHECKLIST.md>).
+3. Bring up one bare PCBA with a current-limited bench supply before attaching the battery, speaker, or external controls.
 4. Do not attach a LiPo, speaker or RF antenna until the power rails and shorts have been checked.
 
 ## Off-board wiring
@@ -43,4 +43,3 @@ The complete enclosure CAD is still pending. Final spacer heights, speaker clear
 6. Test packetized data before attempting compressed voice.
 7. Measure the 3.3 V rail during simultaneous ESP32, radio and audio activity.
 8. Only then install the board and battery in the enclosure.
-

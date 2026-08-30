@@ -165,16 +165,14 @@ def generate_jlc_files() -> tuple[set[str], set[str]]:
             if reference not in installed_references:
                 continue
             rotation = float(row["Rot"])
-            # JLC's ESP32-WROOM datum differs by 90 degrees from the KiCad
-            # footprint datum. The correction makes the antenna face LEFT in
-            # the JLC assembly preview, as it does on the routed PCB.
-            if reference == "U6":
-                rotation = (rotation + 90.0) % 360.0
             writer.writerow(
                 {
                     "Designator": reference,
                     "Mid X": f'{float(row["PosX"]):.6f}mm',
-                    "Mid Y": f'{-float(row["PosY"]):.6f}mm',
+                    # Preserve KiCad's native coordinate system. The Gerbers
+                    # use Y=0 at the PCB top and Y=-100 at the bottom; flipping
+                    # this positive makes JLC's importer invoke auto-alignment.
+                    "Mid Y": f'{float(row["PosY"]):.6f}mm',
                     "Layer": "Top" if row["Side"].lower() == "top" else "Bottom",
                     "Rotation": f"{rotation:.6f}",
                 }
@@ -192,12 +190,19 @@ def generate_jlc_files() -> tuple[set[str], set[str]]:
         cpl = {row["Designator"]: row for row in csv.DictReader(source)}
     expected_u6 = {
         "Mid X": "16.000000mm",
-        "Mid Y": "49.500000mm",
+        "Mid Y": "-49.500000mm",
         "Layer": "Top",
-        "Rotation": "180.000000",
+        "Rotation": "90.000000",
     }
     if {key: cpl["U6"][key] for key in expected_u6} != expected_u6:
-        raise ValueError(f"ESP32 CPL correction is not the verified value: {cpl['U6']}")
+        raise ValueError(f"ESP32 CPL placement is not the verified native value: {cpl['U6']}")
+    for reference, row in cpl.items():
+        x = float(row["Mid X"].removesuffix("mm"))
+        y = float(row["Mid Y"].removesuffix("mm"))
+        if not (0.0 <= x <= 45.0 and -100.0 <= y <= 0.0):
+            raise ValueError(f"{reference} CPL coordinate does not match Gerber origin: {row}")
+    if cpl["J1"]["Mid Y"] != "-95.850000mm":
+        raise ValueError(f"USB-C CPL coordinate is not the verified native value: {cpl['J1']}")
     return installed_references, cpl_references
 
 
@@ -243,8 +248,25 @@ def package_outputs(installed_references: set[str]) -> None:
         shutil.rmtree(model_destination)
     if model_source.exists():
         shutil.copytree(model_source, model_destination)
-    shutil.copy2(ROOT / "README.md", FINAL / "PROJECT_README.md")
-    shutil.copy2(ROOT / "DESIGN_JOURNAL.md", FINAL / "DESIGN_JOURNAL.md")
+    project_readme = (ROOT / "readme.md").read_text(encoding="utf-8")
+    project_readme = project_readme.replace(
+        "<Schematics/Final Draft/Mechanical/walkiepcb_final_exact_usb.step>",
+        "<Mechanical/walkiepcb_final_exact_usb.step>",
+    ).replace(
+        "[`Schematics/Final Draft/Mechanical`](<Schematics/Final Draft/Mechanical>)",
+        "[`Mechanical`](Mechanical)",
+    ).replace(
+        "<Schematics/Final Draft/Audit/", "<Audit/",
+    ).replace(
+        "](journal.md)", "](../../journal.md)",
+    ).replace(
+        "](bom.csv)", "](../../bom.csv)",
+    )
+    (FINAL / "PROJECT_README.md").write_text(project_readme, encoding="utf-8")
+    release_journal = (ROOT / "journal.md").read_text(encoding="utf-8").replace(
+        "<Schematics/Journal Images/", "<../Journal Images/"
+    )
+    (FINAL / "journal.md").write_text(release_journal, encoding="utf-8")
 
     summary = AUDIT / "release_validation.txt"
     summary.write_text(
@@ -254,7 +276,8 @@ def package_outputs(installed_references: set[str]) -> None:
         "ERC: 0 errors, 0 warnings\n"
         "DRC: 0 violations, 0 unconnected pads\n"
         f"Installed references in BOM/CPL: {len(installed_references)}\n"
-        "ESP32 U6 corrected JLC CPL: X=16.000000 mm, Y=49.500000 mm, rotation=180 degrees\n"
+        "CPL/Gerber coordinates share the native origin: X=0..45 mm, Y=0..-100 mm\n"
+        "ESP32 U6 JLC CPL: X=16.000000 mm, Y=-49.500000 mm, rotation=90 degrees\n"
         "Expected JLC preview: ESP32 PCB antenna faces the LEFT board edge.\n"
         "Expected JLC preview: Ra-01SH occupies the TOP footprint and its I-PEX connector is on the board-interior/lower side of the module.\n",
         encoding="utf-8",
@@ -278,7 +301,7 @@ def main() -> None:
     run(str(Path(sys.executable)), str(ROOT / "tools" / "validate_final_release.py"))
     print(f"Final Draft built at {FINAL}")
     print(f"Installed references: {len(installed_references)}")
-    print("ESP32 U6 CPL rotation: 180 degrees (verified correction)")
+    print("ESP32 U6 CPL: native 90 degrees; CPL origin matches Gerbers")
 
 
 if __name__ == "__main__":

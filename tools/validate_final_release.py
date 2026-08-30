@@ -119,12 +119,19 @@ def main() -> None:
     assert cpl["U6"] == {
         "Designator": "U6",
         "Mid X": "16.000000mm",
-        "Mid Y": "49.500000mm",
+        "Mid Y": "-49.500000mm",
         "Layer": "Top",
-        "Rotation": "180.000000",
+        "Rotation": "90.000000",
     }
+    assert cpl["J1"]["Mid Y"] == "-95.850000mm"
+    assert all(
+        0.0 <= float(row["Mid X"].removesuffix("mm")) <= 45.0
+        and -100.0 <= float(row["Mid Y"].removesuffix("mm")) <= 0.0
+        for row in cpl_rows
+    )
     checks.append("PASS BOM/CPL exact parity at 64 installed references")
-    checks.append("PASS corrected JLC CPL U6 = (16.000000, 49.500000), Top, 180 degrees")
+    checks.append("PASS CPL and Gerbers share native X=0..45, Y=0..-100 mm coordinates")
+    checks.append("PASS JLC CPL U6 = (16.000000, -49.500000), Top, 90 degrees")
 
     required_archive_names = {
         "walkiepcb-F_Cu.gtl", "walkiepcb-B_Cu.gbl",
@@ -149,6 +156,9 @@ def main() -> None:
     assert (PROJECT / "3d" / "Ra-01SH_approx.wrl").exists()
     assert (FINAL / "KiCad Project" / "3d" / "Ra-01SH_approx.wrl").exists()
     checks.append("PASS self-contained project-local Ra-01SH 3D review model")
+    assert (PROJECT / "3d" / "USB-C_SMD-TYPE-C-31-M-12.step").exists()
+    assert (FINAL / "KiCad Project" / "3d" / "USB-C_SMD-TYPE-C-31-M-12.step").exists()
+    checks.append("PASS exact C165948 USB-C STEP model is project-local")
 
     report = "Final Draft independent validation — 2026-08-27\n\n" + "\n".join(checks) + "\n"
     (AUDIT / "release_validation_detailed.txt").write_text(report, encoding="utf-8")
