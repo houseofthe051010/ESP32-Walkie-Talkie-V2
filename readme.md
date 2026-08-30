@@ -5,7 +5,7 @@ ESP32 Walkie Talkie V2 is a custom handheld digital voice-radio board. It combin
 The goal is to build a pair of rechargeable handheld radios that can exchange compressed voice without depending on Wi-Fi, cellular service, or an internet connection. The separate sub-GHz radio provides the long-range link while the ESP32 handles audio capture, compression, controls, display updates, and packet management.
 
 > [!IMPORTANT]
-> **Current status: production-candidate PCB design, not a completed physical build.** The PCB has passed ERC/DRC and manufacturing-file validation, but the enclosure and application firmware are not finished and no assembled prototype has been bench-tested yet. See [Hack Club submission status](HACK_CLUB_SUBMISSION.md) before submitting this repository for funding.
+> **Current status: production-candidate PCB design, not a completed physical build.** The PCB has passed ERC/DRC and manufacturing-file validation, but the enclosure and application firmware are not finished and no assembled prototype has been bench-tested yet.
 
 ## Why this project exists
 
@@ -56,7 +56,7 @@ USB-C -> CH340C -> ESP32 programming UART
 Ra-01SH I-PEX socket -> tuned 915 MHz antenna
 ```
 
-The full circuit is documented by the editable [KiCad schematic](<Schematics/KiCad Project/walkiepcb.kicad_sch>). Off-board wiring and mechanical assembly are described in [ASSEMBLY.md](ASSEMBLY.md).
+The full circuit is documented by the editable [KiCad schematic](<Schematics/KiCad Project/walkiepcb.kicad_sch>). Off-board wiring and submission notes are maintained locally and intentionally excluded from Git.
 
 ## Intended use
 
@@ -73,7 +73,7 @@ The soft-power latch must be active for USB programming because the CH340C inten
    The 32 unique assembled LCSC parts were live-checked on 2026-08-30: all were purchasable with positive JLC presale inventory (19 Basic and 13 Extended). Recheck inventory in the order portal because stock is not permanent.
 2. In the assembler preview, confirm that the ESP32 antenna faces the left board edge and the Ra-01SH matches the supplied render.
 3. Inspect and electrically bring up one board carefully before connecting the battery or speaker.
-4. Hand-solder the OLED, five buttons, potentiometer, speaker and battery according to [ASSEMBLY.md](ASSEMBLY.md). The external LED and separate power-switch wiring are no longer used.
+4. Hand-solder the OLED, five buttons, potentiometer, speaker and battery. The external LED and separate power-switch wiring are no longer used.
 5. Design and print/machine an enclosure that secures the PCB, speaker, battery, display, antenna cable and controls.
 6. Flash and test the application firmware before installing the battery permanently.
 
@@ -88,8 +88,6 @@ The editable source is in `Schematics/KiCad Project/`, and the current manufactu
 - [`journal.md`](journal.md) — dated Hack Club-style build journal
 - [`Schematics/Journal Images`](<Schematics/Journal Images>) — tracked build-history images used by the journal
 - [`bom.csv`](bom.csv) — root project-level funding BOM
-- [`ASSEMBLY.md`](ASSEMBLY.md) — off-board wiring and build plan
-- [`HACK_CLUB_SUBMISSION.md`](HACK_CLUB_SUBMISSION.md) — submission checklist and known blockers
 
 ## Project BOM
 

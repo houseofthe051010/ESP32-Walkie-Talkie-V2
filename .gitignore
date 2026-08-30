@@ -15,6 +15,10 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
+# Local submission and build instructions
+ASSEMBLY.md
+HACK_CLUB_SUBMISSION.md
+
 # Local design history and generated reference media
 docs/
 Schematics/Legacy/
