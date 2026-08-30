@@ -2,15 +2,11 @@ Category,Item,Quantity per Walkie,Pack Quantity,Pack Price USD,Price per Piece U
 PCB,Assembled walkie-talkie PCB,1,1,N/A,N/A,N/A,,One completed PCBA is one BOM object; quote pending
 Display,0.96-inch SSD1306 I2C OLED module,1,5,8.83,1.7660,1.7660,https://www.aliexpress.us/item/3256805954920554.html,Verify the ordered variant uses the required four-pin I2C interface and pin order
 Power,804050 2000 mAh 3.7 V 1S LiPo,1,4,16.60,4.1500,4.1500,https://www.aliexpress.us/item/3256812605593313.html,Verify actual dimensions lead polarity discharge rating and protection before installation
-RF,915 MHz 5 dBi claimed 20 cm antenna option,1,2,5.76,2.8800,Not summed,https://www.aliexpress.us/item/3256808481689716.html,Long antenna option; use one antenna per walkie
-RF,915 MHz 2 dBi claimed 6 cm antenna option,1,2,3.14,1.5700,Not summed,https://www.aliexpress.us/item/3256810442579041.html,Short antenna option; use one antenna per walkie
-RF,Antenna allowance used in per-walkie estimate,1,N/A,N/A,2.2250,2.2250,,Average of the $2.88 long and $1.57 short antenna options
+RF,915 MHz 2 dBi antenna with I-PEX/U.FL lead,1,4,5.66,1.4150,1.4150,https://www.aliexpress.us/item/3256805050972049.html,Use one antenna per walkie; verify 915 MHz tuning and connector compatibility before transmitting
 Controls,6 x 6 x 5 mm tactile push button,5,50,1.28,0.0256,0.1280,https://www.aliexpress.us/item/3256805859865632.html,Five buttons required per walkie
-Audio,40 mm 4-8 ohm speaker,1,N/A,N/A,N/A,N/A,,Source and price pending
-Controls,10 kohm linear panel potentiometer,1,N/A,N/A,N/A,N/A,,Source and price pending
-Controls,SPST panel power switch rated above 2 A DC,1,N/A,N/A,N/A,N/A,,Source and price pending
-Indicator,5 mm external LED,1,N/A,N/A,N/A,N/A,,Source and price pending; PCB includes series resistor
+Audio,0.5 W ultra-slim speaker,1,5,2.43,0.4860,0.4860,https://www.aliexpress.us/item/3256809614775479.html,Verify the purchased impedance is 4-8 ohms and confirm enclosure fit
+Controls,20 kohm panel potentiometer,1,5,1.86,0.3720,0.3720,https://www.aliexpress.us/item/2255799926052367.html,Connect the ends to 3V3 and GND and the wiper to POT_ADC
 Assembly,Wire heat-shrink and M3 mounting hardware,1,N/A,N/A,N/A,N/A,,Source and price pending
 Mechanical,Enclosure material,1,N/A,N/A,N/A,N/A,,Pending complete enclosure design
-SUBTOTAL,Known purchased parts excluding PCB and unresolved items,1,N/A,N/A,N/A,8.2690,,Uses the average antenna allowance
+SUBTOTAL,Known purchased parts excluding PCB and unresolved items,1,N/A,N/A,N/A,8.3170,,OLED + battery + one antenna + five buttons + potentiometer + speaker
 TOTAL,Complete cost per walkie,1,N/A,N/A,N/A,N/A,,Cannot be calculated until the PCBA quote and remaining external-part prices are known

@@ -11,7 +11,6 @@ import hashlib
 import re
 import shutil
 import subprocess
-import sys
 import zipfile
 from pathlib import Path
 
@@ -26,6 +25,7 @@ MANUFACTURING = FINAL / "Manufacturing"
 GERBERS = MANUFACTURING / "Gerbers"
 AUDIT = FINAL / "Audit"
 CLI = Path(r"C:\Program Files\KiCad\10.0\bin\kicad-cli.exe")
+KICAD_PYTHON = Path(r"C:\Program Files\KiCad\10.0\bin\python.exe")
 
 FULL_BOM = PROJECT / "walkiepcb_bom_full.csv"
 JLC_BOM = MANUFACTURING / "walkiepcb_final_jlc_bom.csv"
@@ -270,8 +270,8 @@ def package_outputs(installed_references: set[str]) -> None:
 
     summary = AUDIT / "release_validation.txt"
     summary.write_text(
-        "Walkie-talkie Final Draft release validation\n"
-        "Date: 2026-08-27\n"
+        "Walkie-talkie soft-power production release validation\n"
+        "Date: 2026-08-30\n"
         "Board: 45.0 mm x 100.0 mm, 2 copper layers\n"
         "ERC: 0 errors, 0 warnings\n"
         "DRC: 0 violations, 0 unconnected pads\n"
@@ -294,11 +294,15 @@ def package_outputs(installed_references: set[str]) -> None:
 def main() -> None:
     if not CLI.exists():
         raise FileNotFoundError(CLI)
+    if not KICAD_PYTHON.exists():
+        raise FileNotFoundError(KICAD_PYTHON)
     clean_generated_outputs()
     run_kicad_checks_and_exports()
     installed_references, _ = generate_jlc_files()
     package_outputs(installed_references)
-    run(str(Path(sys.executable)), str(ROOT / "tools" / "validate_final_release.py"))
+    # The validator imports pcbnew, which is available in KiCad's bundled
+    # Python but not necessarily in the user's system Python.
+    run(str(KICAD_PYTHON), str(ROOT / "tools" / "validate_final_release.py"))
     print(f"Final Draft built at {FINAL}")
     print(f"Installed references: {len(installed_references)}")
     print("ESP32 U6 CPL: native 90 degrees; CPL origin matches Gerbers")

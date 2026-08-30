@@ -36,6 +36,7 @@ The intended voice mode is SX1262 GFSK/FSK with a low-rate codec and packet-loss
 | Battery protection | DW01A + FS8205A | Cell overcharge, overdischarge and fault protection |
 | USB programming | CH340C | USB-to-UART with automatic boot/reset control |
 | Display | External SSD1306 module | Four hand-wired I2C holes: `SDA`, `SCL`, `3V3`, `GND` |
+| Soft power | AO3401A + MMBT3904 + two 1N4148WS diodes | BTN5 hold-to-start latch; firmware validates the two-second hold and controls shutdown |
 
 The KiCad board is exactly **45.000 × 100.000 mm**, uses **two copper layers**, and includes four 3.2 mm M3 mounting holes. The OLED is mounted above the main PCB on wires or spacers, and the enclosure-mounted 40 mm speaker sits over the upper component region with its Z-clearance checked during enclosure design.
 
@@ -44,7 +45,7 @@ The repository contains a [PCB STEP export](<Schematics/Mechanical/walkiepcb_fin
 ## How the system connects
 
 ```text
-Li-ion cell -> charger/protection -> power switch -> 3.3 V buck-boost -> ESP32
+Li-ion cell -> charger/protection -> BTN5 soft-power latch -> 3.3 V buck-boost -> ESP32
                                                        |            |
                                                        |            +-> OLED / controls
                                                        +-> microphone / SX1262 radio
@@ -59,16 +60,20 @@ The full circuit is documented by the editable [KiCad schematic](<Schematics/KiC
 
 ## Intended use
 
-Once the firmware is implemented, a user will charge each handset through USB-C, attach the correct 915 MHz antenna, turn on the side power switch, select a channel with the controls, and hold the push-to-talk button while speaking. The receiving handset will decode the packets and play the voice through its speaker.
+Once the firmware is implemented, a user will charge each handset through USB-C, attach the correct 915 MHz antenna, hold BTN5 for two seconds to start it, select a channel with the controls, and hold the push-to-talk button while speaking. The receiving handset will decode the packets and play the voice through its speaker. Holding BTN5 for two seconds while running requests a firmware-controlled shutdown.
 
-The main switch must be on for USB programming because the CH340C intentionally runs from switched 3.3 V. Charging remains available while the switch is off. Never transmit without an antenna, and use only frequencies and power levels permitted in the operating region.
+The soft-power latch must be active for USB programming because the CH340C intentionally runs from switched 3.3 V. Charging remains available while the system is off. Never transmit without an antenna, and use only frequencies and power levels permitted in the operating region.
+
+> [!NOTE]
+> The two-second timing is a firmware contract, not an analog timer. Pressing BTN5 applies power immediately; firmware must wait for a continuous two-second press before asserting `PWR_HOLD`. Releasing too early turns the board back off. During shutdown firmware releases `PWR_HOLD`, and power is removed when BTN5 is released.
 
 ## Building the project
 
 1. Order the matched Gerber, BOM and corrected CPL files from `Schematics/Gerber, BOM, CPL files for JLBPCB/`.
+   The 32 unique assembled LCSC parts were live-checked on 2026-08-30: all were purchasable with positive JLC presale inventory (19 Basic and 13 Extended). Recheck inventory in the order portal because stock is not permanent.
 2. In the assembler preview, confirm that the ESP32 antenna faces the left board edge and the Ra-01SH matches the supplied render.
 3. Inspect and electrically bring up one board carefully before connecting the battery or speaker.
-4. Hand-solder the OLED, five buttons, potentiometer, speaker, battery, external LED and power switch according to [ASSEMBLY.md](ASSEMBLY.md).
+4. Hand-solder the OLED, five buttons, potentiometer, speaker and battery according to [ASSEMBLY.md](ASSEMBLY.md). The external LED and separate power-switch wiring are no longer used.
 5. Design and print/machine an enclosure that secures the PCB, speaker, battery, display, antenna cable and controls.
 6. Flash and test the application firmware before installing the battery permanently.
 
@@ -95,16 +100,12 @@ The table is normalized to **one walkie-talkie**. Pack prices are the supplied c
 | Assembled walkie-talkie PCB | 1 | 1 | N/A | N/A | **N/A** | PCBA quote pending; use the matched fabrication files under `Schematics` |
 | 0.96-inch SSD1306 I2C OLED | 1 | 5 | $8.83 | $1.7660 | $1.7660 | [AliExpress OLED](https://www.aliexpress.us/item/3256805954920554.html); verify the selected four-pin I2C variant and pin order |
 | 804050 2000 mAh 3.7 V LiPo | 1 | 4 | $16.60 | $4.1500 | $4.1500 | [AliExpress battery pack](https://www.aliexpress.us/item/3256812605593313.html); verify dimensions, polarity, discharge capability and protection |
-| Long 915 MHz antenna option, 20 cm, claimed 5 dBi | 1 | 2 | $5.76 | $2.8800 | Option | [AliExpress long antenna](https://www.aliexpress.us/item/3256808481689716.html) |
-| Short 915 MHz antenna option, 6 cm, claimed 2 dBi | 1 | 2 | $3.14 | $1.5700 | Option | [AliExpress short antenna](https://www.aliexpress.us/item/3256810442579041.html) |
-| Antenna allowance used for estimating | 1 | — | — | $2.2250 average | $2.2250 | Average of the long and short antenna unit prices; only one antenna is installed |
+| 915 MHz 2 dBi antenna with I-PEX/U.FL lead | 1 | 4 | $5.66 | $1.4150 | $1.4150 | [AliExpress antenna](https://www.aliexpress.us/item/3256805050972049.html); verify 915 MHz tuning and connector compatibility |
 | 6 × 6 × 5 mm tactile push button | 5 | 50 | $1.28 | $0.0256 | $0.1280 | [AliExpress button pack](https://www.aliexpress.us/item/3256805859865632.html) |
-| 40 mm, 4–8 Ω speaker | 1 | TBD | TBD | TBD | TBD | Source pending |
-| 10 kΩ linear potentiometer | 1 | TBD | TBD | TBD | TBD | Source pending |
-| SPST power switch rated above 2 A DC | 1 | TBD | TBD | TBD | TBD | Source pending |
-| 5 mm external LED | 1 | TBD | TBD | TBD | TBD | Source pending; PCB includes its series resistor |
+| 0.5 W ultra-slim speaker | 1 | 5 | $2.43 | $0.4860 | $0.4860 | [AliExpress speaker](https://www.aliexpress.us/item/3256809614775479.html); select a 4–8 Ω option and verify dimensions |
+| 20 kΩ panel potentiometer | 1 | 5 | $1.86 | $0.3720 | $0.3720 | [AliExpress potentiometer](https://www.aliexpress.us/item/2255799926052367.html) |
 | Wire, heat-shrink, M3 hardware and enclosure | 1 set | TBD | TBD | TBD | TBD | Mechanical purchasing pending |
-| **Known subtotal excluding PCB and unresolved items** |  |  |  |  | **$8.2690** | Uses the average antenna allowance |
+| **Known subtotal excluding PCB and unresolved items** |  |  |  |  | **$8.3170** | OLED, battery, one antenna, five buttons, potentiometer and speaker |
 | **Complete cost per walkie-talkie** |  |  |  |  | **N/A** | Awaiting the PCBA quote and remaining external-part prices |
 
-Buying every listed AliExpress pack costs **$35.61 before shipping and tax**. The limiting four-battery/four-antenna quantities cover four complete handsets; the fifth OLED and remaining buttons are spares unless more batteries and antennas are purchased.
+Buying every listed AliExpress pack costs **$36.66 before shipping and tax**. The limiting four-battery/four-antenna quantities cover four complete handsets; the fifth OLED, fifth potentiometer, fifth speaker and remaining buttons are spares unless more batteries and antennas are purchased.

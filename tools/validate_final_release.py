@@ -78,11 +78,26 @@ def main() -> None:
         ("U6", "6"): "/BAT_SENSE",
         ("U7", "7"): "/SYS_SW",
         ("U8", "3"): "/3V3",
+        ("Q5", "1"): "/PWR_GATE",
+        ("Q5", "2"): "/SYS_FUSED",
+        ("Q5", "3"): "/SYS_SW",
+        ("Q6", "1"): "/PWR_LATCH_BASE",
+        ("Q6", "2"): "/GND",
+        ("Q6", "3"): "/PWR_GATE",
+        ("D5", "1"): "/BTN5_SW",
+        ("D5", "2"): "/PWR_GATE",
+        ("D6", "1"): "/BTN5_SW",
+        ("D6", "2"): "/BTN5",
+        ("SW5", "1"): "/BTN5_SW",
+        ("SW5", "2"): "/GND",
+        ("U6", "8"): "/BTN5",
+        ("U6", "14"): "/PWR_HOLD",
     }
     for key, expected in expected_nets.items():
         actual = pad_net(board, *key)
         assert actual == expected, f"{key[0]}.{key[1]} expected {expected}, found {actual}"
-    checks.append("PASS critical CH340, microphone, ESP32, amplifier, battery-ADC, and radio pad nets")
+    assert board.FindFootprintByReference("J3") is None
+    checks.append("PASS critical CH340, microphone, ESP32, amplifier, battery-ADC, radio, and soft-power pad nets; J3 absent")
 
     j7 = footprint(board, "J7")
     j7_by_x = sorted(j7.Pads(), key=lambda pad: pad.GetPosition().x)
@@ -110,7 +125,9 @@ def main() -> None:
     installed_rows = [row for row in bom_rows if row["DNP"].upper() == "NO"]
     installed_refs = {ref for row in installed_rows for ref in expand(row["Reference"])}
     assert all(row["JLC/LCSC"] for row in installed_rows)
-    assert len(installed_refs) == 64
+    assert len(installed_refs) == 71
+    assert {"Q5", "Q6", "R27", "R28", "R30", "D5", "D6"} <= installed_refs
+    assert "J3" not in installed_refs
 
     with JLC_CPL.open(newline="", encoding="utf-8-sig") as source:
         cpl_rows = list(csv.DictReader(source))
@@ -129,7 +146,7 @@ def main() -> None:
         and -100.0 <= float(row["Mid Y"].removesuffix("mm")) <= 0.0
         for row in cpl_rows
     )
-    checks.append("PASS BOM/CPL exact parity at 64 installed references")
+    checks.append("PASS BOM/CPL exact parity at 71 installed references")
     checks.append("PASS CPL and Gerbers share native X=0..45, Y=0..-100 mm coordinates")
     checks.append("PASS JLC CPL U6 = (16.000000, -49.500000), Top, 90 degrees")
 
@@ -160,7 +177,7 @@ def main() -> None:
     assert (FINAL / "KiCad Project" / "3d" / "USB-C_SMD-TYPE-C-31-M-12.step").exists()
     checks.append("PASS exact C165948 USB-C STEP model is project-local")
 
-    report = "Final Draft independent validation — 2026-08-27\n\n" + "\n".join(checks) + "\n"
+    report = "Soft-power production release independent validation — 2026-08-30\n\n" + "\n".join(checks) + "\n"
     (AUDIT / "release_validation_detailed.txt").write_text(report, encoding="utf-8")
     print(report)
 

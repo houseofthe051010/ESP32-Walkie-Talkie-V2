@@ -221,6 +221,25 @@ The assembly STEP contained exact named `MANIFOLD_SOLID_BREP` solids matching th
 
 I also removed the redundant `Schematics/Final Draft/` copy, KiCad prose notes/reports, Gerber-folder readmes/reports, and stale PCB render snapshots from Git's index while leaving every local file untouched. The active KiCad schematic, PCB, project tables, custom footprints, 3D models, engineering BOMs, and the explicitly useful `audit-plots/` reference folder remain tracked.
 
+## 2026-08-30 — Replaced the external switch with BTN5 soft power
+
+**Portal summary:** `Added a firmware-qualified soft-power latch and updated purchasing`
+**Time:** 2.00 h (elapsed design time doubled to include planning/thinking time)
+
+The separate high-current panel switch and its two PCB solder pads were removed. BTN5, the lower-right button below the microphone, now starts an AO3401A high-side P-channel MOSFET through D5. A Basic-listed MMBT3904 lets GPIO12 (`PWR_HOLD`) maintain power after the button is released, D6 reports the physical BTN5 state without exposing the unpowered ESP32 to cell voltage, and three 100 kΩ Basic resistors define the off and drive states. Both diodes are Basic-listed 1N4148WS parts. The intended room-temperature shutdown current is below 2 µA, although that remains a prototype measurement target rather than a worst-case guarantee across temperature.
+
+The first implementation mistake was trying to build the two-second delay entirely with a larger analog RC/latch network. It added thirteen parts in an already dense area and produced 162 DRC errors. I abandoned that version rather than hiding the violations, restored the dated pre-change KiCad files from `Schematics/Legacy/`, and reduced the hardware to seven parts. The second placement attempt was electrically complete but intersected existing OLED, UART, microphone and power traces, producing 44 DRC violations. The successful layout moved Q6 and its bias resistors into the top diagnostic region, moved the TX test pad slightly without losing access, placed D5/D6 close to BTN5, and rerouted the redundant USB-power branch to open space for Q5.
+
+A later logic review caught a more subtle error before ordering: the first simplified circuit used only one diode from GPIO32 to `PWR_GATE`. Because Q6 holds that gate low while the board is on, firmware would have seen BTN5 as permanently pressed. I split the physical switch node into `BTN5_SW` and added D6. D5 now conducts from the PMOS gate only during a physical press, while D6 separately pulls the GPIO sense line low. This preserves both low-leakage startup and normal button detection after the latch takes over.
+
+Several smaller routing errors were fixed iteratively: an early gate path crossed Class-D/microphone signals, the main PMOS source crossed its gate pull-up, a moved radio-reset route collided with the battery connector, and a removed USB branch initially left one disconnected section. Each was corrected in the source script and regenerated from the clean legacy PCB, rather than editing the resulting broken board by hand. The final board reports **0 DRC violations, 0 unrouted pads, 0 ERC errors, and 0 ERC warnings**.
+
+The two-second behavior is deliberately implemented in firmware. A press powers the hardware immediately, firmware validates that BTN5 remains held for two seconds, and only then asserts `PWR_HOLD`. A short startup press therefore turns back off on release. While running, a two-second hold requests an orderly shutdown; firmware releases `PWR_HOLD`, and the PMOS turns off after BTN5 is released. This avoids a bulky analog timer while retaining a very low off-current path.
+
+The external-parts BOM was also corrected: the long antenna and old short-antenna option were replaced by the supplied four-pack at $5.66, the unused external 5 mm LED and separate power switch were removed, and the supplied 20 kΩ potentiometer and 0.5 W speaker listings were added. The known non-PCB cost is now $8.317 per handset, and all listed purchase packs total $36.66 before shipping and tax.
+
+I then audited every LCSC number in the generated assembly BOM against JLCPCB's exact selected-part data. All 32 unique assembled parts were marked purchasable and had positive JLC presale inventory on 2026-08-30: 19 Basic lines and 13 Extended lines. This also resolved a misleading stock warning from the public LCSC distributor view—the 1 µF capacitor C15849, ICS-43432 microphone C574021, and 2.2 µH inductor C6807735 each showed positive JLC assembly inventory even though their distributor pages were zero or unavailable. Inventory can change, so the BOM must still be revalidated in the JLC order portal immediately before payment.
+
 ## Current next steps
 
 1. Design the complete enclosure and export both its editable source and a full-assembly STEP file.

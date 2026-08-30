@@ -5,7 +5,7 @@
       "Application": "Pcbnew",
       "Version": "10.0.4"
     },
-    "CreationDate": "2026-08-26T20:25:28-04:00"
+    "CreationDate": "2026-08-30T14:03:13-04:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
@@ -46,6 +46,11 @@
     {
       "Path": "walkiepcb-F_Paste.gtp",
       "FileFunction": "SolderPaste,Top",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "walkiepcb-B_Paste.gbp",
+      "FileFunction": "SolderPaste,Bot",
       "FilePolarity": "Positive"
     },
     {

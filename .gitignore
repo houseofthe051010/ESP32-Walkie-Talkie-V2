@@ -28,6 +28,11 @@ Schematics/KiCad Project/*.md
 Schematics/KiCad Project/*.rpt
 Schematics/KiCad Project/walkiepcb_final_audit.pdf
 Schematics/KiCad Project/walkiepcb_final_audit.xml
+Schematics/KiCad Project/*.net
+Schematics/KiCad Project/*.png
+Schematics/KiCad Project/*_exported_bom.csv
+Schematics/KiCad Project/audit-plots/pre_soft_power_top.png
+Schematics/KiCad Project/audit-plots/soft_power_placement_attempt.png
 
 # Keep fabrication outputs, BOM, and CPL; exclude notes/reports and stale renders.
 Schematics/Gerber, BOM, CPL files for JLBPCB/*.md

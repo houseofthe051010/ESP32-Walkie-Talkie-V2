@@ -6352,7 +6352,7 @@
 			)
 			(embedded_fonts no)
 		)
-	
+
 		(symbol "RF_Module:ESP32-WROOM-32"
 				(exclude_from_sim no)
 				(in_bom yes)
@@ -10649,121 +10649,7 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x02")
-		(at 317.5 111.76 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced no)
-		(uuid "253940da-ddb3-4d23-af58-70b8332e9273")
-		(property "Reference" "J3"
-			(at 317.5 114.3 0.0000)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SW_PWR_IN / SW_PWR_OUT"
-			(at 317.5 106.68 0.0000)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "walkiepcb:WirePads_2_P5.08mm"
-			(at 317.5 111.76 0.0000)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Hand-wired"
-			(at 320.04 116.8399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MPN" "2 solder pads"
-			(at 320.04 116.8399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC/LCSC" ""
-			(at 320.04 116.8399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC Classification" "DNP"
-			(at 320.04 116.8399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Economic Compatible" "YES"
-			(at 320.04 116.8399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "DNP" "YES"
-			(at 320.04 116.8399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Notes" "External series power switch; exactly two holes"
-			(at 320.04 116.8399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ddf18377-3736-4373-9ee8-fd9bbe57a83c")
-		)
-		(pin "2"
-			(uuid "ab104bbd-ef69-4781-9507-e6641bde29ac")
-		)
-		(instances
-			(project "ESP32 Walkie-Talkie"
-				(path "/a12f6580-08c1-4b1c-9066-19675d34380a"
-					(reference "J3")
-					(unit 1)
-				)
-			)
-		)
-	)
+
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x15")
 		(at 354.33 114.3 0)
@@ -14686,7 +14572,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BTN5 / hand-solder"
+		(property "Value" "BTN5 POWER / FUNCTION"
 			(at 344.17 304.546 0.0000)
 			(effects
 				(font
@@ -14758,7 +14644,7 @@
 				(hide yes)
 			)
 		)
-		(property "Notes" "Exactly two plated holes; ESP32 internal pull-up"
+		(property "Notes" "Hold 2 s for firmware-validated power on/off; pulls PWR_GATE low"
 			(at 346.71 311.1499 0)
 			(effects
 				(font
@@ -16955,26 +16841,8 @@
 		)
 		(uuid "a3c34eaf-6ae4-4137-a90e-7022778a6991")
 	)
-	(label "SYS_FUSED"
-		(at 312.42 111.76 180)
-		(effects
-			(font
-				(size 0.9 0.9)
-			)
-			(justify left bottom)
-		)
-		(uuid "b5b47083-662b-4978-a5c1-e1c97e3fef21")
-	)
-	(label "SYS_SW"
-		(at 312.42 114.3 180)
-		(effects
-			(font
-				(size 0.9 0.9)
-			)
-			(justify left bottom)
-		)
-		(uuid "dd09203f-7c9e-4973-ab22-b61462556d92")
-	)
+
+
 	(label "SYS_SW"
 		(at 349.25 96.52 180)
 		(effects
@@ -17945,7 +17813,7 @@
 		)
 		(uuid "30614a54-0f5b-4492-b505-7d2b251f9957")
 	)
-	(label "BTN5"
+	(label "BTN5_SW"
 		(at 339.09 306.07 180)
 		(effects
 			(font
@@ -20435,7 +20303,7 @@
 		)
 		(uuid "722bfaac-9820-4e77-86fe-1632360c14de")
 	)
-	(label "GPIO12"
+	(label "PWR_HOLD"
 		(at 81.28 207.01 0)
 		(effects
 			(font (size 0.9 0.9))
@@ -20555,7 +20423,7 @@
 				(font (size 1.27 1.27))
 			)
 		)
-		(property "Value" "GPIO12"
+		(property "Value" "PWR_HOLD / GPIO12"
 			(at 281.86 336.47 0)
 			(effects
 				(font (size 1.27 1.27))
@@ -20610,7 +20478,7 @@
 				(font (size 1.27 1.27))
 			)
 		)
-		(property "Notes" "Optional expansion solder/test pad"
+		(property "Notes" "Soft-power hold output and diagnostic pad; GPIO12 boot strap"
 			(at 276.86 331.47 0)
 			(hide yes)
 			(effects
@@ -20627,7 +20495,7 @@
 			)
 		)
 	)
-	(label "GPIO12"
+	(label "PWR_HOLD"
 		(at 276.86 331.47 270)
 		(effects
 			(font (size 0.9 0.9))
@@ -20739,6 +20607,926 @@
 			(justify left bottom)
 		)
 		(uuid "5d14428a-149e-471c-a6d1-64de5d741e14")
+	)
+(symbol
+		(lib_id "Transistor_FET:AO3401A")
+		(at 302.26 137.16 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "26443923-8847-4e95-8fb9-eb5117b61d78")
+		(property "Reference" "Q5"
+			(at 264.16 118.745 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AO3401A"
+			(at 264.16 116.84 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 264.16 114.935 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Alpha & Omega Semiconductor"
+			(at 261.62 121.9199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "AO3401A"
+			(at 261.62 121.9199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC/LCSC" "C15127"
+			(at 261.62 121.9199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Classification" "Basic"
+			(at 261.62 121.9199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Economic Compatible" "YES"
+			(at 261.62 121.9199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DNP" "NO"
+			(at 261.62 121.9199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Notes" "Main soft-power high-side P-MOSFET; S=SYS_FUSED D=SYS_SW"
+			(at 261.62 121.9199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7bc9a21d-4aad-4652-996f-5ebec5e603d7")
+		)
+		(pin "2"
+			(uuid "47138eba-d536-4213-8291-00eed764aa83")
+		)
+		(pin "3"
+			(uuid "57013f56-b5db-47a0-b524-0791b1a0e9c2")
+		)
+		(instances
+			(project "ESP32 Walkie-Talkie"
+				(path "/a12f6580-08c1-4b1c-9066-19675d34380a"
+					(reference "Q5")
+					(unit 1)
+				)
+			)
+		)
+	)
+(symbol
+		(lib_id "Transistor_BJT:Q_NPN_BEC")
+		(at 322.58 137.16 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "c526f5c3-a59f-4c64-848c-1ef5af184b4e")
+		(property "Reference" "Q6"
+			(at 200.74 50.72 0)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(property "Value" "MMBT3904"
+			(at 210.74 50.72 0)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 205.74 45.72 0)
+			(hide yes)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(property "Manufacturer" "CJ (Changjiang Electronics Tech)"
+			(at 205.74 45.72 0)
+			(hide yes)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(property "MPN" "MMBT3904"
+			(at 205.74 45.72 0)
+			(hide yes)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(property "JLC/LCSC" "C20526"
+			(at 205.74 45.72 0)
+			(hide yes)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(property "JLC Classification" "Basic"
+			(at 205.74 45.72 0)
+			(hide yes)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(property "Economic Compatible" "YES"
+			(at 205.74 45.72 0)
+			(hide yes)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(property "DNP" "NO"
+			(at 205.74 45.72 0)
+			(hide yes)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(property "Notes" "Firmware-controlled main-gate pull-down"
+			(at 205.74 45.72 0)
+			(hide yes)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(pin "1" (uuid "e84a9a0a-6688-43b8-b6dd-d0200ccd9bee"))
+		(pin "2" (uuid "e271dce1-ea44-47f3-a01c-49d2cf15b0cf"))
+		(pin "3" (uuid "6d3573ec-f7e1-4a18-a6d2-372a3f0be56b"))
+		(instances
+			(project "ESP32 Walkie-Talkie"
+				(path "/a12f6580-08c1-4b1c-9066-19675d34380a"
+					(reference "Q6")
+					(unit 1)
+				)
+			)
+		)
+	)
+(symbol
+		(lib_id "Device:R")
+		(at 297.18 157.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "e13910cd-229b-419f-9792-55ddda67298e")
+		(property "Reference" "R27"
+			(at 112.522 218.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 110.49 218.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 108.712 218.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL"
+			(at 113.03 223.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "0402WGF1003TCE"
+			(at 113.03 223.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC/LCSC" "C25741"
+			(at 113.03 223.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Classification" "Basic"
+			(at 113.03 223.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Economic Compatible" "YES"
+			(at 113.03 223.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DNP" "NO"
+			(at 113.03 223.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Notes" "Main P-MOS gate pull-up"
+			(at 113.03 223.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "384d2fa7-dde2-4a35-8667-1ec60935e7b5")
+		)
+		(pin "2"
+			(uuid "3db859a0-858a-404d-b960-010f113b860b")
+		)
+		(instances
+			(project "ESP32 Walkie-Talkie"
+				(path "/a12f6580-08c1-4b1c-9066-19675d34380a"
+					(reference "R27")
+					(unit 1)
+				)
+			)
+		)
+	)
+(symbol
+		(lib_id "Device:R")
+		(at 312.42 157.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "c19cabd6-0602-4d30-bbcf-395054f511dd")
+		(property "Reference" "R28"
+			(at 112.522 218.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 110.49 218.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 108.712 218.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL"
+			(at 113.03 223.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "0402WGF1003TCE"
+			(at 113.03 223.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC/LCSC" "C25741"
+			(at 113.03 223.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Classification" "Basic"
+			(at 113.03 223.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Economic Compatible" "YES"
+			(at 113.03 223.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DNP" "NO"
+			(at 113.03 223.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Notes" "Latch-transistor base pull-down"
+			(at 113.03 223.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3614d4b5-06b4-4479-83c2-3d7e4768d8f5")
+		)
+		(pin "2"
+			(uuid "81c70c46-67bf-4fb6-aed3-edb40ac4d8cb")
+		)
+		(instances
+			(project "ESP32 Walkie-Talkie"
+				(path "/a12f6580-08c1-4b1c-9066-19675d34380a"
+					(reference "R28")
+					(unit 1)
+				)
+			)
+		)
+	)
+(symbol
+		(lib_id "Device:R")
+		(at 327.66 157.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "25afda9d-0042-47c1-9856-06e49263850b")
+		(property "Reference" "R30"
+			(at 112.522 218.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 110.49 218.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 108.712 218.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL"
+			(at 113.03 223.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "0402WGF1003TCE"
+			(at 113.03 223.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC/LCSC" "C25741"
+			(at 113.03 223.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Classification" "Basic"
+			(at 113.03 223.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Economic Compatible" "YES"
+			(at 113.03 223.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DNP" "NO"
+			(at 113.03 223.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Notes" "GPIO12 hold base-current limit"
+			(at 113.03 223.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b567ba3f-77b8-40ae-8c6d-6f02663a71e7")
+		)
+		(pin "2"
+			(uuid "e533ceef-585d-4610-b2a5-a4c13060c34c")
+		)
+		(instances
+			(project "ESP32 Walkie-Talkie"
+				(path "/a12f6580-08c1-4b1c-9066-19675d34380a"
+					(reference "R30")
+					(unit 1)
+				)
+			)
+		)
+	)
+(symbol
+		(lib_id "Device:D_Schottky")
+		(at 345.44 157.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "5c9b8d6b-8a46-41c9-aac7-07ccca496d2e")
+		(property "Reference" "D5"
+			(at 232.41 111.76 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1N4148WS"
+			(at 232.41 106.68 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 232.41 109.22 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Jiangsu Changjing Electronics Technology"
+			(at 234.95 114.2999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "1N4148WS"
+			(at 234.95 114.2999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC/LCSC" "C2128"
+			(at 234.95 114.2999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Classification" "Basic"
+			(at 234.95 114.2999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Economic Compatible" "YES"
+			(at 234.95 114.2999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DNP" "NO"
+			(at 234.95 114.2999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Notes" "BTN5 start diode; A=PWR_GATE K=BTN5_SW"
+			(at 234.95 114.2999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a9e3104c-dfd9-484f-a35a-9124f888b8a5")
+		)
+		(pin "2"
+			(uuid "ab1290cb-a0bf-444c-987d-866e542a27e8")
+		)
+		(instances
+			(project "ESP32 Walkie-Talkie"
+				(path "/a12f6580-08c1-4b1c-9066-19675d34380a"
+					(reference "D5")
+					(unit 1)
+				)
+			)
+		)
+	)
+(symbol
+		(lib_id "Device:D_Schottky")
+		(at 365.76 157.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f3f112dc-b9ff-46dc-b21e-ec3d808bf51a")
+		(property "Reference" "D6"
+			(at 232.41 111.76 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1N4148WS"
+			(at 232.41 106.68 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 232.41 109.22 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Jiangsu Changjing Electronics Technology"
+			(at 234.95 114.2999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "1N4148WS"
+			(at 234.95 114.2999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC/LCSC" "C2128"
+			(at 234.95 114.2999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC Classification" "Basic"
+			(at 234.95 114.2999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Economic Compatible" "YES"
+			(at 234.95 114.2999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DNP" "NO"
+			(at 234.95 114.2999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Notes" "BTN5 sense diode; A=BTN5 K=BTN5_SW"
+			(at 234.95 114.2999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7c94a317-20af-48fc-b41d-8153ef6a099d")
+		)
+		(pin "2"
+			(uuid "7c53c1cb-6ec6-4e23-beec-afc96d4b17bc")
+		)
+		(instances
+			(project "ESP32 Walkie-Talkie"
+				(path "/a12f6580-08c1-4b1c-9066-19675d34380a"
+					(reference "D6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "PWR_GATE"
+		(at 297.18 137.16 180)
+		(effects
+			(font (size 0.9 0.9))
+			(justify left bottom)
+		)
+		(uuid "7841b365-ff69-4baa-b8bc-f5ef63edc7df")
+	)
+	(label "SYS_FUSED"
+		(at 304.80 132.08 90)
+		(effects
+			(font (size 0.9 0.9))
+			(justify left bottom)
+		)
+		(uuid "66ec0c60-dae1-42c8-ac2d-4dae94f6ee3f")
+	)
+	(label "SYS_SW"
+		(at 304.80 142.24 270)
+		(effects
+			(font (size 0.9 0.9))
+			(justify right bottom)
+		)
+		(uuid "008559df-9dd7-4fff-be03-40d85d44c75b")
+	)
+	(label "PWR_LATCH_BASE"
+		(at 317.50 137.16 180)
+		(effects
+			(font (size 0.9 0.9))
+			(justify left bottom)
+		)
+		(uuid "a3afd6f8-359c-47d5-91f1-6b051febbef0")
+	)
+	(label "GND"
+		(at 325.12 132.08 90)
+		(effects
+			(font (size 0.9 0.9))
+			(justify left bottom)
+		)
+		(uuid "743bd9ef-40cf-4996-9a65-277baa771f5b")
+	)
+	(label "PWR_GATE"
+		(at 325.12 142.24 270)
+		(effects
+			(font (size 0.9 0.9))
+			(justify right bottom)
+		)
+		(uuid "1da4b26c-ed29-4517-8bcf-3ca3d1094cab")
+	)
+	(label "SYS_FUSED"
+		(at 297.18 153.67 90)
+		(effects
+			(font (size 0.9 0.9))
+			(justify left bottom)
+		)
+		(uuid "f705a6bd-205d-413e-9fa3-134554048ca4")
+	)
+	(label "PWR_GATE"
+		(at 297.18 161.29 270)
+		(effects
+			(font (size 0.9 0.9))
+			(justify right bottom)
+		)
+		(uuid "9d695290-c845-4e6a-af38-861ba7f2ca85")
+	)
+	(label "PWR_LATCH_BASE"
+		(at 312.42 153.67 90)
+		(effects
+			(font (size 0.9 0.9))
+			(justify left bottom)
+		)
+		(uuid "38aac0d8-ba2f-4abd-91d2-39295dad5f20")
+	)
+	(label "GND"
+		(at 312.42 161.29 270)
+		(effects
+			(font (size 0.9 0.9))
+			(justify right bottom)
+		)
+		(uuid "83e300b0-52df-4639-af69-7b778ef85326")
+	)
+	(label "PWR_HOLD"
+		(at 327.66 153.67 90)
+		(effects
+			(font (size 0.9 0.9))
+			(justify left bottom)
+		)
+		(uuid "28957896-2b40-4543-a06b-f00e9dca03bf")
+	)
+	(label "PWR_LATCH_BASE"
+		(at 327.66 161.29 270)
+		(effects
+			(font (size 0.9 0.9))
+			(justify right bottom)
+		)
+		(uuid "33372f52-fc75-4243-a8db-697acbb51d66")
+	)
+	(label "BTN5_SW"
+		(at 341.63 157.48 180)
+		(effects
+			(font (size 0.9 0.9))
+			(justify left bottom)
+		)
+		(uuid "8b6a5412-88f1-4c06-bfe7-0b8ea948e08f")
+	)
+	(label "PWR_GATE"
+		(at 349.25 157.48 0)
+		(effects
+			(font (size 0.9 0.9))
+			(justify right bottom)
+		)
+		(uuid "639278be-a48f-4bf5-85ab-b1871179ce2e")
+	)
+	(label "BTN5_SW"
+		(at 361.95 157.48 180)
+		(effects
+			(font (size 0.9 0.9))
+			(justify left bottom)
+		)
+		(uuid "137e4786-fc13-4a51-a581-8955025ee2ae")
+	)
+	(label "BTN5"
+		(at 369.57 157.48 0)
+		(effects
+			(font (size 0.9 0.9))
+			(justify right bottom)
+		)
+		(uuid "5464c10f-a1e3-4b4e-8c78-e6b523179d31")
+	)
+	(text "SOFT POWER: hold BTN5 for 2 s. A press immediately wakes hardware; firmware must assert GPIO12/PWR_HOLD only after validating the full 2 s startup hold. While running, release PWR_HOLD after a 2 s shutdown hold; power drops when BTN5 is released. Typical OFF leakage target <2 uA; verify prototypes over temperature."
+		(exclude_from_sim no)
+		(at 294.64 172.72 0)
+		(effects
+			(font (size 1.0 1.0))
+			(justify left bottom)
+		)
+		(uuid "2be559bb-30a6-4bba-9e0b-145e02571474")
 	)
 	(sheet_instances
 		(path "/"
