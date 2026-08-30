@@ -40,7 +40,7 @@ The intended voice mode is SX1262 GFSK/FSK with a low-rate codec and packet-loss
 
 The KiCad board is exactly **45.000 × 100.000 mm**, uses **two copper layers**, and includes four 3.2 mm M3 mounting holes. The OLED is mounted above the main PCB on wires or spacers, and the enclosure-mounted 40 mm speaker sits over the upper component region with its Z-clearance checked during enclosure design.
 
-The repository contains a [PCB STEP export](<Schematics/Mechanical/walkiepcb_final_exact_usb.step>) under `Schematics`. Current-design PCB render snapshots are intentionally excluded from Git so that they cannot be mistaken for the latest editable KiCad revision.
+The repository contains the PCB STEP export and enclosure CAD under [`CAD`](CAD), including the current [PCB STEP model](<CAD/PCB/walkiepcb_final.step>). Selected build-history renders used by the journal are kept in [`assets`](assets), while redundant working renders remain local.
 
 ## How the system connects
 
@@ -83,10 +83,10 @@ The editable source is in `Schematics/KiCad Project/`, and the current manufactu
 
 - [`Schematics/KiCad Project`](<Schematics/KiCad Project>) — editable KiCad schematic, PCB, libraries, 3D models, audit plots, and engineering BOMs
 - [`Schematics/Gerber, BOM, CPL files for JLBPCB`](<Schematics/Gerber, BOM, CPL files for JLBPCB>) — fabrication Gerbers, BOM, and CPL
-- [`Schematics/Mechanical`](<Schematics/Mechanical>) — PCB-generated STEP export using the exact USB-C model
+- [`CAD`](CAD) — PCB STEP model, full assembly, printable STLs, and individual enclosure STEP files
 - [`Firmware`](Firmware) — firmware status and planned architecture
 - [`journal.md`](journal.md) — dated Hack Club-style build journal
-- [`Schematics/Journal Images`](<Schematics/Journal Images>) — tracked build-history images used by the journal
+- [`assets`](assets) — tracked build-history images used by the journal
 - [`bom.csv`](bom.csv) — root project-level funding BOM
 
 ## Project BOM
