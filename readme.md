@@ -71,6 +71,7 @@ The soft-power latch must be active for USB programming because the CH340C inten
 
 1. Order the matched Gerber, BOM and corrected CPL files from `Schematics/Gerber, BOM, CPL files for JLBPCB/`.
    The 32 unique assembled LCSC parts were live-checked on 2026-08-30: all were purchasable with positive JLC presale inventory (19 Basic and 13 Extended). Recheck inventory in the order portal because stock is not permanent.
+   The corrected CPL uses positive board-space Y coordinates. If JLC still asks to automatically align the components, cancel and verify that the newest CPL was uploaded rather than accepting an automatic shift.
 2. In the assembler preview, confirm that the ESP32 antenna faces the left board edge and the Ra-01SH matches the supplied render.
 3. Inspect and electrically bring up one board carefully before connecting the battery or speaker.
 4. Hand-solder the OLED, five buttons, potentiometer, speaker and battery. The external LED and separate power-switch wiring are no longer used.
