@@ -5,9 +5,13 @@ description: "An ESP32 walkie talkie with a custom PCB and SX1262 radio"
 created_at: "2026-08-24"
 ---
 
-# 2026-08-24 - Evaluating Project Goals (1.5 hours)
+# 2026-08-24 - Evaluating Project Goals
 
 **Time: 1:24 PM**
+
+Time to brainstorm my PCB. I recently created a PCB for this project but that was because my previous SHIP guy rejected it and told me to make a PCB for it. I followed the directions and made a PCB but it was very bad and not optimal. My original design was meant to be hard soldered.
+
+Now, I want to redesign my walkie talkie and do a PCB-FIRST design, where I first design a PCB for my walkie talkie and then build the case around it, which is much easier than soldering messy wires like in my previous version.
 
 Earlier this year, I made a walkie talkie using an esp32, a INMP441 mic, MAX9857A amp, I2C OLED 0.96", buttons, pot, led. It used ESPNOW, but it wasn't the best. It was hardwired, messy (extremely messy and hard to solder) and a PCB version was warranted.
 
