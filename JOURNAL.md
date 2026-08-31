@@ -1,4 +1,11 @@
-## 2026-08-24 - Evaluating Project Goals (1.5 hours)
+---
+title: "ESP32 Walkie Talkie With SX1262 Radio"
+author: "Aditya Verma"
+description: "An ESP32 walkie talkie with a custom PCB and SX1262 radio"
+created_at: "2026-08-24"
+---
+
+# 2026-08-24 - Evaluating Project Goals (1.5 hours)
 
 **Time: 1:24 PM**
 
@@ -36,3 +43,5 @@ The only worry with my choice was that the 5DBI antenna was 20CM long, which is 
 For my MCU, I was going to go with ESP32 S3. It had built in USB and didn't require a UART converter. For my buttons, I was going to remove the PTT system. For the power stage, I was thinking of using a AP7361C 3.2 V LDO.
 
 I was most likely going to be using JLBPCBA so it comes assembled.
+
+**Total time spent: 1.5 hours**

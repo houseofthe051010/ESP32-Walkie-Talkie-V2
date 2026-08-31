@@ -88,7 +88,7 @@ The editable source is in `Schematics/KiCad Project/`, and the current manufactu
 - [`Schematics/Gerber, BOM, CPL files for JLBPCB`](<Schematics/Gerber, BOM, CPL files for JLBPCB>) — fabrication Gerbers, BOM, and CPL
 - [`CAD`](CAD) — PCB STEP model, full assembly, printable STLs, and individual enclosure STEP files
 - [`Firmware`](Firmware) — firmware status and planned architecture
-- [`journal.md`](journal.md) — dated Hack Club-style build journal
+- [`JOURNAL.md`](JOURNAL.md) — dated Hack Club-style build journal
 - [`assets`](assets) — tracked build-history images used by the journal
 - [`bom.csv`](bom.csv) — root project-level funding BOM
 
