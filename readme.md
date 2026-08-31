@@ -1,5 +1,7 @@
 # ESP32 Walkie Talkie V2
 
+Author: Aditya Verma
+
 ESP32 Walkie Talkie V2 is a custom handheld digital voice-radio board. It combines an ESP32, a dedicated 915 MHz SX1262 radio, digital microphone, Class-D speaker amplifier, battery charging, battery monitoring, USB-C programming, controls, and an external OLED connection on one 45 × 100 mm PCB.
 
 The goal is to build a pair of rechargeable handheld radios that can exchange compressed voice without depending on Wi-Fi, cellular service, or an internet connection. The separate sub-GHz radio provides the long-range link while the ESP32 handles audio capture, compression, controls, display updates, and packet management.
