@@ -7,6 +7,8 @@ created_at: "2026-08-24"
 
 # 2026-08-24 - Evaluating Project Goals
 
+**Date: 2026-08-24**
+
 **Time: 1:24 PM**
 
 Time to brainstorm my PCB. I recently created a PCB for this project but that was because my previous SHIP guy rejected it and told me to make a PCB for it. I followed the directions and made a PCB but it was very bad and not optimal. My original design was meant to be hard soldered.
@@ -51,6 +53,8 @@ I was most likely going to be using JLBPCBA so it comes assembled.
 **Total time spent: 1.5 hours**
 
 # 2026-08-25 - Starting the Schematic and PCB (7 hours)
+
+**Date: 2026-08-25**
 
 **Time: 7:42 PM**
 
@@ -158,6 +162,8 @@ In the new PCB, to reduce price, I was going to remove non critical components s
 
 # 2026-08-26 - Revising the PCB and adding the radio.
 
+**Date: 2026-08-26**
+
 Today, I was going to be adding the SX1262. I added it to my schematic.
 
 ![Journal image](assets/journal-docx/image2.png)
@@ -210,7 +216,9 @@ There was a problem with the rendering though, as the placement wasn’t correct
 
 **Total time spent: 5 hours**
 
-# 2026-08-27 - JOURNAL 2 - NEXT DAY
+# 2026-08-27 - Fixing Placement, Adding Mounting Holes and Soft Power
+
+**Date: 2026-08-27**
 
 I needed to fix the rendering and placement issue from yesterday. The released CPL used the wrong Y-coordinate direction. I fixed that which fixed all alignment issues
 
@@ -246,7 +254,9 @@ I also added it to the PCB:
 
 **Total time spent: 4 hours**
 
-# 2026-08-28 - JOURNAL 3 - NEXT DAY
+# 2026-08-28 - Designing a case
+
+**Date: 2026-08-28**
 
 Designing a case
 
@@ -262,7 +272,9 @@ It still had the 5 buttons but the PTT and LED were removed, though I kept the l
 
 **Total time spent: 3 hours**
 
-# 2026-08-29 - Journal 4 - next day
+# 2026-08-29 - Finalizing the PCB and Fixing Bugs
+
+**Date: 2026-08-29**
 
 I finalized my PCB and I wanted to look over it and confirm that it was production ready. I looked over it and I definitely found some bugs.
 
