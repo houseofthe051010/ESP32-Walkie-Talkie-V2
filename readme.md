@@ -1,5 +1,7 @@
 # ESP32 Walkie Talkie V2
 
+![Walkie-talkie enclosure and PCB design](assets/walkie-design-overview.png)
+
 This project is submitted to review at forge; And also, I have made a similar ESP32 based walkie talkie in the past. This is an iteration and is significantly different from the old version. It uses a custom PCB, new and different components, communication protocols, radios, and CAD/casing. It is a much needed iteration from my old version which was very difficult to hard wire and prone to several mistakes.
 
 
@@ -32,11 +34,11 @@ Not implemented yet.
 
 ## Project BOM
 
-The table is normalized to **one walkie-talkie**. Pack prices are the supplied checkout prices and exclude shipping and tax. The PCBA is deliberately represented as one object with an unknown price; the [engineering BOM](<Schematics/KiCad Project/walkiepcb_bom_full.csv>) remains the component-level assembly list.
+The table is normalized to **one walkie-talkie**. Pack prices are the supplied checkout prices and exclude shipping and tax. The PCBA is represented as one object, priced from the supplied five-PCBA quote: $163.97 assembly + $4.00 PCB fabrication = $167.97, or $33.594 per assembled board. The [engineering BOM](<Schematics/KiCad Project/walkiepcb_bom_full.csv>) remains the component-level assembly list.
 
 | Item | Qty/walkie | Pack | Pack price | Per piece | Cost/walkie | Source / note |
 |---|---:|---:|---:|---:|---:|---|
-| Assembled walkie-talkie PCB | 1 | 1 | N/A | N/A | **N/A** | PCBA quote pending; use the matched fabrication files under `Schematics` |
+| Assembled walkie-talkie PCB | 1 | 5 | $167.97 | $33.5940 | $33.5940 | [Five-PCBA quote](assets/jlc-quote-5-pcba.png); includes PCB fabrication and assembly |
 | 0.96-inch SSD1306 I2C OLED | 1 | 5 | $8.83 | $1.7660 | $1.7660 | [AliExpress OLED](https://www.aliexpress.us/item/3256805954920554.html); verify the selected four-pin I2C variant and pin order |
 | 804050 2000 mAh 3.7 V LiPo | 1 | 4 | $16.60 | $4.1500 | $4.1500 | [AliExpress battery pack](https://www.aliexpress.us/item/3256812605593313.html); verify dimensions, polarity, discharge capability and protection |
 | 915 MHz 2 dBi antenna with I-PEX/U.FL lead | 1 | 4 | $5.66 | $1.4150 | $1.4150 | [AliExpress antenna](https://www.aliexpress.us/item/3256805050972049.html); verify 915 MHz tuning and connector compatibility |
@@ -45,8 +47,9 @@ The table is normalized to **one walkie-talkie**. Pack prices are the supplied c
 | 20 kΩ panel potentiometer | 1 | 5 | $1.86 | $0.3720 | $0.3720 | [AliExpress potentiometer](https://www.aliexpress.us/item/2255799926052367.html) |
 | Printed Casing, Wires, and Screws | 1 Set | 1 | $0 | $0 | $0 | Use available filament, wire and m3 screws or glue. |
 | 650 nm 5 mW laser module | 1 | 10 | $2.83 | $0.2830 | $0.2830 | [AliExpress laser module](https://www.aliexpress.us/item/3256806548478140.html) |
-| **Complete cost per walkie-talkie** |  |  |  |  | **N/A** | Awaiting the PCBA quote |
+| **Complete cost per walkie-talkie** |  |  |  |  | **$42.1940 (~$42.19)** | Per-unit parts allocation using the five-PCBA quote; excludes shipping and tax |
 
+The [two-PCBA quote](assets/jlc-quote-2-pcba.png) totals **$99.24**, or **$49.62 per assembled board** and **$58.22 per walkie-talkie** with the same external parts. It reduces the upfront PCB order cost, but increases the per-unit cost. These per-walkie figures allocate pack costs to the parts used; purchasing whole packs can require a larger upfront payment.
 
 
 ### What I would do differently in the future / future plans

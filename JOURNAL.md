@@ -296,6 +296,14 @@ Now, I was working on the readme, organizing it to hack club standards and inclu
 
 ![GitHub repository and README](assets/journal-review-repo.png)
 
+![Final quote for five PCBAs](assets/jlc-quote-5-pcba.png)
+
+I also quote the final quote, which was 163 for 5 PCBAs. The price went down to around 99 dollars when I switched to two PCBAs, which was much better:
+
+![Final quote for two PCBAs](assets/jlc-quote-2-pcba.png)
+
+I updated and made my BOM
+
 I will submit for review now
 
 **Total time spent: 1.5 hours**
