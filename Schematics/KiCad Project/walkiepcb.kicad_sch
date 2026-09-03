@@ -7972,7 +7972,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 66.802 33.02 90)
 			(effects
 				(font
@@ -21399,7 +21399,7 @@
 		)
 		(uuid "7841b365-ff69-4baa-b8bc-f5ef63edc7df")
 	)
-	(label "SYS_FUSED"
+	(label "SYS_SW"
 		(at 304.80 132.08 90)
 		(effects
 			(font (size 0.9 0.9))
@@ -21407,7 +21407,7 @@
 		)
 		(uuid "66ec0c60-dae1-42c8-ac2d-4dae94f6ee3f")
 	)
-	(label "SYS_SW"
+	(label "SYS_FUSED"
 		(at 304.80 142.24 270)
 		(effects
 			(font (size 0.9 0.9))
@@ -21423,7 +21423,7 @@
 		)
 		(uuid "a3afd6f8-359c-47d5-91f1-6b051febbef0")
 	)
-	(label "GND"
+	(label "PWR_GATE"
 		(at 325.12 132.08 90)
 		(effects
 			(font (size 0.9 0.9))
@@ -21431,7 +21431,7 @@
 		)
 		(uuid "743bd9ef-40cf-4996-9a65-277baa771f5b")
 	)
-	(label "PWR_GATE"
+	(label "GND"
 		(at 325.12 142.24 270)
 		(effects
 			(font (size 0.9 0.9))

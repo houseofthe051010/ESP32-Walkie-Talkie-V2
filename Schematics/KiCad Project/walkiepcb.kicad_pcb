@@ -4804,7 +4804,7 @@
 				)
 			)
 		)
-		(property "Notes" "Main soft-power high-side P-MOSFET"
+		(property "Notes" "Main soft-power high-side P-MOSFET; S=SYS_FUSED D=SYS_SW"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -13888,7 +13888,7 @@
 				)
 			)
 		)
-		(property "Notes" "Firmware-controlled gate pull-down"
+		(property "Notes" "Firmware-controlled main-gate pull-down"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -15204,7 +15204,7 @@
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz 0 0 180)
 			)
 		)
 	)
