@@ -52,7 +52,7 @@ I was most likely going to be using JLBPCBA so it comes assembled.
 
 **Total time spent: 1.5 hours**
 
-# 2026-08-25 - Starting the Schematic and PCB (7 hours)
+# 2026-08-25 - Starting the Schematic and PCB (7.5 hours)
 
 **Date: 2026-08-25**
 
@@ -158,7 +158,7 @@ In the new PCB, to reduce price, I was going to remove non critical components s
 
 ![Searching JLCPCB for a DW01A alternative](assets/journal-revc-dw01a-search.png)
 
-**Total time spent: 7 hours**
+**Total time spent: 7.5 hours**
 
 # 2026-08-26 - Revising the PCB and adding the radio.
 
@@ -214,7 +214,7 @@ There was a problem with the rendering though, as the placement wasn’t correct
 
 ![Journal image](assets/journal-docx/image6.png)
 
-**Total time spent: 5 hours**
+**Total time spent: 5.5 hours**
 
 # 2026-08-27 - Fixing Placement, Adding Mounting Holes and Soft Power
 
@@ -270,7 +270,7 @@ This case looked similar to the old one but was MUCH easier to assembly and much
 
 It still had the 5 buttons but the PTT and LED were removed, though I kept the laser. There was a space for the POT. The laser could actually be easily replaced with an IR module instead for other stuff. This version was much easier as it used screws and not press-fit/glue.
 
-**Total time spent: 3 hours**
+**Total time spent: 4 hours**
 
 # 2026-08-29 - Finalizing the PCB and Fixing Bugs
 
@@ -282,7 +282,7 @@ I finalized my PCB and I wanted to look over it and confirm that it was producti
 
 I had misaligned my USB c port. I also had a false resistor, and my schematic was a little different in BOM from my pcb. This was likely due to me accidentally deleting something. So I fixed them, and after a while of staring, and searching up diagrams and PINOUTS for the components in my project to make sure they weren’t missing any filtering or external support components, I finalized my PCB and it I think it is production ready. Now I need to make my github repo.
 
-**Total time spent: 1.5 hours (estimated)**
+**Total time spent: 2 hours**
 
 # 2026-08-30 - Making the github repo, documentation and and submitting for review
 
@@ -306,4 +306,4 @@ I updated and made my BOM
 
 I will submit for review now
 
-**Total time spent: 1.5 hours**
+**Total time spent: 2 hours**
