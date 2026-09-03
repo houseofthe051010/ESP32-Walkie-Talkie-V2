@@ -21,6 +21,8 @@ I made this projet not because I just wanted a walkie talkie, I wanted a control
 
 In the Schematics folder is the GERBER+BOM+CPL file for easy PCBA assembly of this board. The KiCad project is also there.
 
+![Walkie-talkie schematic](assets/schematic-white.png)
+
 
 
 
@@ -45,7 +47,6 @@ The table is normalized to **one walkie-talkie**. Pack prices are the supplied c
 | 650 nm 5 mW laser module | 1 | 10 | $2.83 | $0.2830 | $0.2830 | [AliExpress laser module](https://www.aliexpress.us/item/3256806548478140.html) |
 | **Complete cost per walkie-talkie** |  |  |  |  | **N/A** | Awaiting the PCBA quote |
 
-Buying every listed AliExpress pack costs **$39.49 before shipping and tax**. The limiting four-battery/four-antenna quantities cover four complete handsets; the fifth OLED, fifth potentiometer, fifth speaker and remaining buttons and laser modules are spares unless more batteries and antennas are purchased.
 
 
 ### What I would do differently in the future / future plans

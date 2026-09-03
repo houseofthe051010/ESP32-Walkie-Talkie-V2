@@ -283,3 +283,19 @@ I finalized my PCB and I wanted to look over it and confirm that it was producti
 I had misaligned my USB c port. I also had a false resistor, and my schematic was a little different in BOM from my pcb. This was likely due to me accidentally deleting something. So I fixed them, and after a while of staring, and searching up diagrams and PINOUTS for the components in my project to make sure they weren’t missing any filtering or external support components, I finalized my PCB and it I think it is production ready. Now I need to make my github repo.
 
 **Total time spent: 1.5 hours (estimated)**
+
+# 2026-08-30 - Making the github repo, documentation and and submitting for review
+
+**Date: 2026-08-30**
+
+I made a quick change to the cad, adding space for this laser, or IR, both can be used among walkies. They are good flipper zero likes tools.
+
+![CAD with space for the laser or IR module](assets/journal-review-cad.png)
+
+Now, I was working on the readme, organizing it to hack club standards and including my CAD, schematics, and firmware
+
+![GitHub repository and README](assets/journal-review-repo.png)
+
+I will submit for review now
+
+**Total time spent: 1.5 hours**
