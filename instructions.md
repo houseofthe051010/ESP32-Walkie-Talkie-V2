@@ -29,3 +29,11 @@
 7. Print the case lid and use super glue to add it on
 
 ![Completed case with lid](assets/instructions-07-case-lid.png)
+
+## Firmware
+
+1. Connect to the esp32 using its usb port to your computer
+2. Open thonny editor, download main.py code, and open thonny with it. 
+3. Connect to esp32 in thonny using your corresponding COM port
+4. Flash micropython onto the esp32
+5. Run and save the code onto the esp32
