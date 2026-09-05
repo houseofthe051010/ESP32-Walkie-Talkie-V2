@@ -307,3 +307,17 @@ I updated and made my BOM
 I will submit for review now
 
 **Total time spent: 2 hours**
+
+# 2026-09-05 - Adding firmware
+
+**Date: 2026-09-05**
+
+**Time: 11:41 AM**
+
+I needed to add basic firmware as the review required it. I used micropython in thonny as it was super easy to make firmware, none of the C compiling like I do with esp-idf. I built short code that sends a signal to the other walkie talkie and the other walkie talkie responds.
+
+(thonny cant be tracked by hackatime)
+
+![Basic MicroPython radio firmware in Thonny](assets/journal-firmware-thonny.png)
+
+**Total time spent: 30 minutes**
