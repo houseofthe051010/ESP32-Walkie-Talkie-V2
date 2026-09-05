@@ -30,7 +30,7 @@ In the Schematics folder is the GERBER+BOM+CPL file for easy PCBA assembly of th
 
 ## Firmware
 
-Not implemented yet. 
+I have included a basic micropython test file for using the walkie talkie when assembled with its radio. It is just a prototype and not complete. I will likely make a full firmware by porting it from my old walkie talkie build and using it as a tempalte.
 
 ## Project BOM
 
