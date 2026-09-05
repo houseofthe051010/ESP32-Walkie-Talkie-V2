@@ -2,6 +2,10 @@
 
 ![Fully assembled walkie-talkie design](assets/assembled-walkie-talkie.png)
 
+## Instructions
+
+Build instructions are at: [instructions.md](instructions.md)
+
 This project is submitted to review at forge; And also, I have made a similar ESP32 based walkie talkie in the past. This is an iteration and is significantly different from the old version. It uses a custom PCB, new and different components, communication protocols, radios, and CAD/casing. It is a much needed iteration from my old version which was very difficult to hard wire and prone to several mistakes.
 
 
