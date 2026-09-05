@@ -40,7 +40,6 @@ I have included a basic micropython test file for using the walkie talkie when a
 
 ## Project BOM
 
-The table is normalized to **one walkie-talkie**. Pack prices are the supplied checkout prices and exclude shipping and tax. The PCBA is represented as one object, priced from the supplied five-PCBA quote: $163.97 assembly + $4.00 PCB fabrication = $167.97, or $33.594 per assembled board. The [engineering BOM](<Schematics/KiCad Project/walkiepcb_bom_full.csv>) remains the component-level assembly list.
 
 | Item | Qty/walkie | Pack | Pack price | Per piece | Cost/walkie | Source / note |
 |---|---:|---:|---:|---:|---:|---|
