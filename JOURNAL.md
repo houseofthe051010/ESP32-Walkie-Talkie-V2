@@ -52,7 +52,7 @@ I was most likely going to be using JLBPCBA so it comes assembled.
 
 **Total time spent: 1.5 hours**
 
-# 2026-08-25 - Starting the Schematic and PCB (7.5 hours)
+# 2026-08-25 - Starting the Schematic and PCB (6.5 hours)
 
 **Date: 2026-08-25**
 
@@ -158,7 +158,7 @@ In the new PCB, to reduce price, I was going to remove non critical components s
 
 ![Searching JLCPCB for a DW01A alternative](assets/journal-revc-dw01a-search.png)
 
-**Total time spent: 7.5 hours**
+**Total time spent: 6.5 hours**
 
 # 2026-08-26 - Revising the PCB and adding the radio.
 
